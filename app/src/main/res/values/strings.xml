@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">ServiceMaster</string>
+
+    <!--authentication activities -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgotPassword">Forgot password</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="resetEmail">Send email reset link</string>
+
+    <!-- dashboard activity -->
+    <string name="welcome">Welcome</string>
+    <string name="newCheckin">New CheckIn</string>
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+
+    <!-- form1 activity -->
+    <string name="form1Title">Customer and vehicle details</string>
+    <string name="regNo">Reg. No</string>
+    <string name="financier">Financier</string>
+    <string name="customer">Customer</string>
+    <string name="motorist">Motorist</string>
+    <string name="telNo">Tel. No</string>
+    <string name="idNo">Id. No</string>
+    <string name="dateIn">Date In</string>
+    <string name="jobType">Job Type</string>
+    <string name="duration">Duration</string>
+    <string name="promisedDate">Promised Date</string>
+    <string name="postalAddress">Postal Address</string>
+    <string name="make">Make</string>
+    <string name="model">Model</string>
+    <string name="chassisNo">Chassis No</string>
+    <string name="engineNo">Engine No</string>
+    <string name="vinNo">Vin No</string>
+    <string name="fuel">Fuel</string>
+    <string name="odometer">Odometer</string>
+    <string name="manualJobCardNo">Manual JobCard No</string>
+    <string name="towedBy">Towed By</string>
+
+    <!-- form2 activity -->
+    <string name="form2Title">Insurance and Service</string>
+    <string name="insuranceSticker">Insurance Sticker</string>
+    <string name="inspectionSticker">Inspection Sticker</string>
+    <string name="claimNo">Claim No</string>
+    <string name="serviceAdvisor">Service Advisor</string>
+
+    <!-- form3 activity -->
+    <string name="form3Title">Exterior</string>
+    <string name="checked">Yes/No</string>
+    <string name="remarks">Remarks</string>
+
+    <!-- form4 activity -->
+    <string name="form4Title">Interior</string>
+
+    <!-- form5 activity -->
+    <string name="form5Title">Wheels</string>
+
+    <!-- form6 activity -->
+    <string name="form6Title">Tyres and battery</string>
+    <string name="serialNo">Serial No.</string>
+    <string name="condition">Condition</string>
+
+    <!-- form7 activity -->
+    <string name="form7Title">Standard Tools</string>
+    <string name="general">General remarks/Work to be done</string>
+
+
+</resources>
