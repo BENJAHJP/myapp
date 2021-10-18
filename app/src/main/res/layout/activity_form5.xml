@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".activities.checkinforms.Form5Activity">
 
+    <ImageView
+        android:id="@+id/backButtonForm5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -49,12 +61,13 @@
         android:id="@+id/floatingActionButton5"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="600dp"
         android:elevation="20dp"
         android:src="@drawable/ic_arrow"
         app:fabCustomSize="70dp"
         app:fabSize="normal"
+        android:backgroundTint="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"

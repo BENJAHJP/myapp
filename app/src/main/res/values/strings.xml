@@ -15,6 +15,10 @@
     <string name="active">Active</string>
     <string name="completed">Completed</string>
 
+    <!-- Active activity -->
+    <string name="activeTitle">Active</string>
+    <string name="view">View</string>
+
     <!-- form1 activity -->
     <string name="form1Title">Customer and vehicle details</string>
     <string name="regNo">Reg. No</string>
@@ -64,6 +68,21 @@
     <!-- form7 activity -->
     <string name="form7Title">Standard Tools</string>
     <string name="general">General remarks/Work to be done</string>
+
+    <!-- form7 activity -->
+    <string name="form8Title">Image Capture</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_form_inputs">FormInputsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

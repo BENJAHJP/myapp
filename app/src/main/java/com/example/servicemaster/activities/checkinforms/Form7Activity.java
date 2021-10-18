@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.servicemaster.adapters.Adapter;
 import com.example.servicemaster.models.ItemsModel;
 import com.example.servicemaster.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +44,29 @@ public class Form7Activity extends AppCompatActivity {
         Adapter adapter = new Adapter(list,Form7Activity.this);
 
         recyclerView.setAdapter(adapter);
+
+
+        ImageView imageView = (ImageView) findViewById(R.id.backButtonForm7);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Form7Activity.this, Form6Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        FloatingActionButton floatingActionButton7 = (FloatingActionButton) findViewById(R.id.floatingActionButton7);
+
+        floatingActionButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Form7Activity.this, Form8Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 }

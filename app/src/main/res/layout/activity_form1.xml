@@ -3,32 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".activities.checkinforms.Form1Activity"
     android:backgroundTint="@color/blue"
     >
+
+    <ImageView
+        android:id="@+id/backButtonForm8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/form1Title"
         android:textSize="25sp"
+        android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="80dp"
         android:scrollbars="none"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,342 +51,342 @@
 
             <EditText
                 android:id="@+id/regNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/regNo"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <Spinner
                 android:id="@+id/financierSpinner"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/customerTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/customer"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
             <EditText
                 android:id="@+id/motoristTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/motorist"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/emailTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/email"
+                android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/telNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/telNo"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/idNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/idNo"
+                android:importantForAutofill="no"
                 android:inputType="number"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
-                android:focusable="false"
                 android:id="@+id/dateInTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
+                android:focusable="false"
                 android:hint="@string/dateIn"
+                android:importantForAutofill="no"
+                android:inputType="date"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no"
-                android:inputType="date" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <Spinner
                 android:id="@+id/jobTypeSpinner"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/durationTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/duration"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/promisedDateTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/promisedDate"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/postalAddressTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/postalAddress"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <Spinner
                 android:id="@+id/makeSpinner"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/modelTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/model"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/chassisNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/chassisNo"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/engineNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/engineNo"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/vinNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/vinNo"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <Spinner
                 android:id="@+id/fuelSpinner"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/odometerTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/odometer"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/manualJobCardNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/manualJobCardNo"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <EditText
                 android:id="@+id/towedByTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/towedBy"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                android:importantForAutofill="no" />
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         </LinearLayout>
 
     </ScrollView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton1"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="500dp"
         android:elevation="20dp"
         android:src="@drawable/ic_arrow"
         app:fabCustomSize="70dp"
         app:fabSize="normal"
+        android:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

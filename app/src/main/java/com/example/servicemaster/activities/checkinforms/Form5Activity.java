@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.servicemaster.adapters.Adapter;
 import com.example.servicemaster.models.ItemsModel;
@@ -45,6 +46,18 @@ public class Form5Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Form5Activity.this, Form6Activity.class);
                 startActivity(i);
+                finish();
+            }
+        });
+
+        ImageView imageView = (ImageView) findViewById(R.id.backButtonForm5);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Form5Activity.this, Form4Activity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

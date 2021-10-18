@@ -38,7 +38,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull Adapter.MyViewHolder holder, int position) {
         int pos = holder.getAdapterPosition();
         holder.textView.setText(list.get(pos).getTitle());
-
     }
 
     @Override
@@ -61,6 +60,5 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             editText = itemView.findViewById(R.id.recyclerViewEditText);
         }
     }
-
 
 }

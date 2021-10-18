@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".activities.checkinforms.Form2Activity">
 
+    <ImageView
+        android:id="@+id/backButtonForm2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -36,9 +48,9 @@
 
             <EditText
                 android:id="@+id/insuranceStickerTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/insuranceSticker"
@@ -51,9 +63,9 @@
                 android:importantForAutofill="no" />
             <EditText
                 android:id="@+id/inspectionStickerTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/inspectionSticker"
@@ -66,9 +78,9 @@
                 android:importantForAutofill="no" />
             <EditText
                 android:id="@+id/claimNoTextInput"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 android:hint="@string/claimNo"
@@ -81,9 +93,9 @@
                 android:importantForAutofill="no" />
             <Spinner
                 android:id="@+id/serviceAdvisorSpinner"
-                android:layout_width="350dp"
+                android:layout_width="320dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,12 +109,13 @@
         android:id="@+id/floatingActionButton2"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="280dp"
         android:layout_marginTop="500dp"
         android:elevation="20dp"
         android:src="@drawable/ic_arrow"
         app:fabCustomSize="70dp"
         app:fabSize="normal"
+        android:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"

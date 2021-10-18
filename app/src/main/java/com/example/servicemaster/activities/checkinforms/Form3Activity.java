@@ -6,11 +6,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.servicemaster.adapters.Adapter;
 import com.example.servicemaster.models.ItemsModel;
 import com.example.servicemaster.R;
+import com.example.servicemaster.roomdatabases.DatabaseConfig;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -18,15 +21,23 @@ import java.util.List;
 
 public class Form3Activity extends AppCompatActivity {
 
+    DatabaseConfig databaseConfig;
+    ImageView imageView;
+    FloatingActionButton floatingActionButton3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form3);
 
+        databaseConfig = DatabaseConfig.databaseGetInstance(Form3Activity.this);
+
         RecyclerView recyclerView = findViewById(R.id.form3RecyclerView);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Form3Activity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
+
+        CheckBox checkBox = (CheckBox) findViewById(R.id.recyclerViewCheckbox);
 
         List<ItemsModel> list = new ArrayList<>();
         list.add(new ItemsModel("Overall Appearance",0,""));
@@ -49,14 +60,20 @@ public class Form3Activity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
-        FloatingActionButton floatingActionButton3 = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+        floatingActionButton3 = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
 
-        floatingActionButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form3Activity.this, Form4Activity.class);
-                startActivity(i);
-            }
+        floatingActionButton3.setOnClickListener(view -> {
+            Intent i = new Intent(Form3Activity.this, Form4Activity.class);
+            startActivity(i);
+            finish();
+        });
+
+        imageView = (ImageView) findViewById(R.id.backButtonForm3);
+
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(Form3Activity.this, Form2Activity.class);
+            startActivity(i);
+            finish();
         });
     }
 }

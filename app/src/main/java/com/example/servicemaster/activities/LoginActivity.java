@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }
