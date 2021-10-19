@@ -9,20 +9,22 @@ public class Form3Entity {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
-
+    private String regNo;
     private String title;
     private int checked;
     private String remarks;
 
-    public Form3Entity(int id, String title, int checked, String remarks) {
+    public Form3Entity(int id, String regNo, String title, int checked, String remarks) {
         this.id = id;
+        this.regNo = regNo;
         this.title = title;
         this.checked = checked;
         this.remarks = remarks;
     }
 
     @Ignore
-    public Form3Entity(String title, int checked, String remarks) {
+    public Form3Entity(String regNo, String title, int checked, String remarks) {
+        this.regNo = regNo;
         this.title = title;
         this.checked = checked;
         this.remarks = remarks;
@@ -34,6 +36,14 @@ public class Form3Entity {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getRegNo() {
+        return regNo;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
     }
 
     public String getTitle() {

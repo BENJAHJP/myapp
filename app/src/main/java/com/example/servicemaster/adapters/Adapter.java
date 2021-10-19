@@ -37,7 +37,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.MyViewHolder holder, int position) {
         int pos = holder.getAdapterPosition();
-        holder.textView.setText(list.get(pos).getTitle());
+        holder.title.setText(list.get(pos).getTitle());
+
     }
 
     @Override
@@ -50,14 +51,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView textView;
+        TextView title;
         MaterialCheckBox materialCheckBox;
-        EditText editText;
+        EditText remarks;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.recyclerViewText);
+            title = itemView.findViewById(R.id.recyclerViewText);
             materialCheckBox = itemView.findViewById(R.id.recyclerViewCheckbox);
-            editText = itemView.findViewById(R.id.recyclerViewEditText);
+            remarks = itemView.findViewById(R.id.recyclerViewEditText);
         }
     }
 

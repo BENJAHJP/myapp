@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-
 import com.example.servicemaster.R;
 import com.example.servicemaster.activities.checkinforms.Form1Activity;
 import com.google.android.material.card.MaterialCardView;
@@ -19,7 +17,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        MaterialCardView checkinCardButton = (MaterialCardView) findViewById(R.id.checkinCardButton);
+        MaterialCardView checkInCardButton = (MaterialCardView) findViewById(R.id.checkinCardButton);
         MaterialCardView activeCardButton = (MaterialCardView) findViewById(R.id.activeCardButton);
         MaterialCardView completedCardButton = (MaterialCardView) findViewById(R.id.completedCardButton);
         ImageButton imageButton = (ImageButton) findViewById(R.id.logoutButton);
@@ -33,7 +31,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        checkinCardButton.setOnClickListener(new View.OnClickListener() {
+        checkInCardButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DashboardActivity.this, Form1Activity.class);

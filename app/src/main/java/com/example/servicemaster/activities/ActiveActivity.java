@@ -11,9 +11,13 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.servicemaster.R;
+import com.example.servicemaster.activities.checkinforms.Form1Activity;
 import com.example.servicemaster.adapters.ActiveAdapter;
 import com.example.servicemaster.adapters.Adapter;
+import com.example.servicemaster.models.ActiveDataModel;
 import com.example.servicemaster.models.ActiveModel;
+import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.example.servicemaster.roomdatabases.entities.Form1Entity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -21,37 +25,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ActiveActivity extends AppCompatActivity {
+    public DatabaseConfig databaseConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active);
 
+        databaseConfig = DatabaseConfig.databaseGetInstance(ActiveActivity.this);
+
         RecyclerView recyclerView = findViewById(R.id.activeRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ActiveActivity.this);
 
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        List<ActiveModel> list = new ArrayList<ActiveModel>();
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-        list.add(new ActiveModel("wed","fef","rf4f","f4f4"));
-
-
+        List<ActiveDataModel> list = databaseConfig.form1Dao().getMyData();
 
         ActiveAdapter adapter = new ActiveAdapter(list, ActiveActivity.this);
 
@@ -67,6 +55,7 @@ public class ActiveActivity extends AppCompatActivity {
                 finish();
             }
         });
+        /*
 
         MaterialButton materialButton = (MaterialButton) findViewById(R.id.viewActiveButton);
 
@@ -78,6 +67,6 @@ public class ActiveActivity extends AppCompatActivity {
                 builder.setMessage("details of the vehicle");
                 builder.create();
             }
-        });
+        }); */
     }
 }

@@ -34,10 +34,10 @@ public class Form1Activity extends AppCompatActivity {
             engineNoTextInput, vinNoTextInput, odometerTextInput, manualJobCardNoTextInput,
             towedByTextInput;
 
-    public String [] financierValues = {"SELF","INSURANCE"};
-    public String [] makeValues = {"BMW","TOYOTA","ISUZU","HAMMER","OPEL"};
-    public String [] jobTypeValues = {"Mechanical","Service","WIP"};
-    public String [] fuelSpinnerValue = {"E","1/4","1/2","F"};
+    public String [] financierValues = {"Financier ...","SELF","INSURANCE"};
+    public String [] makeValues = {"Make ...","BMW","TOYOTA","ISUZU","HAMMER","OPEL"};
+    public String [] jobTypeValues = {"Job type ...","Mechanical","Service","WIP"};
+    public String [] fuelSpinnerValue = {"Fuel ...","E","1/4","1/2","F"};
 
     Spinner financierSpinnerInput, jobTypeSpinnerInput, makeSpinnerInput, fuelSpinnerInput;
     FloatingActionButton floatingActionButton1;

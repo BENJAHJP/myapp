@@ -16,34 +16,31 @@
 
         <TextView
             android:id="@+id/customerActiveText"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/customer" />
 
         <TextView
+            android:layout_marginStart="10dp"
             android:id="@+id/regNoActiveText"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/regNo" />
 
         <TextView
+            android:layout_marginStart="10dp"
             android:id="@+id/jobTypeActiveText"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/jobType" />
 
         <TextView
+            android:layout_marginStart="10dp"
             android:id="@+id/durationActiveText"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/duration" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/viewActiveButton"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/view" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView

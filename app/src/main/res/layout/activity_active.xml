@@ -40,29 +40,27 @@
         >
 
         <TextView
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/customer"
             />
         <TextView
-            android:layout_width="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/regNo"
             />
         <TextView
-            android:layout_width="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/jobType"
             />
         <TextView
-            android:layout_width="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="80dp"
             android:layout_height="60dp"
             android:text="@string/duration"
-            />
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:text="@string/view"
             />
 
 

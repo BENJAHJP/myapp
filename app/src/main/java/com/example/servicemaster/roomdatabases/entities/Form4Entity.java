@@ -10,22 +10,33 @@ public class Form4Entity {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
+    private String regNo;
     private String title;
     private int checked;
     private String remarks;
 
-    public Form4Entity(int id, String title, int checked, String remarks) {
+    public Form4Entity(int id,String regNo, String title, int checked, String remarks) {
         this.id = id;
         this.title = title;
         this.checked = checked;
         this.remarks = remarks;
+        this.regNo = regNo;
     }
 
     @Ignore
-    public Form4Entity(String title, int checked, String remarks) {
+    public Form4Entity(String regNo, String title, int checked, String remarks) {
         this.title = title;
         this.checked = checked;
         this.remarks = remarks;
+        this.regNo = regNo;
+    }
+
+    public String getRegNo() {
+        return regNo;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
     }
 
     public int getId() {

@@ -43,7 +43,7 @@ public class Form4Activity extends AppCompatActivity {
         list.add(new ItemsModel("Computer Box",0,""));
         list.add(new ItemsModel("Horn",0,""));
 
-        Adapter adapter = new Adapter(list,Form4Activity.this);
+        Adapter adapter = new Adapter(list, Form4Activity.this);
 
         recyclerView.setAdapter(adapter);
 
