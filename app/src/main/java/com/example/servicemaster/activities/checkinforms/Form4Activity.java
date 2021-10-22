@@ -1,72 +1,87 @@
 package com.example.servicemaster.activities.checkinforms;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.servicemaster.adapters.Adapter;
-import com.example.servicemaster.models.ItemsModel;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.servicemaster.R;
+import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Form4Activity extends AppCompatActivity {
+
+    EditText rearViewMirror, windowSwitches, floorMatsCarpet, dashboard, engineSensorsAndFuses, washerBottle,
+            cigarLighter, speaker, radioCassetteCD, engineCompartment, computerBox, horn;
+
+    MaterialCheckBox rearViewMirrorCheckbox, windowSwitchesCheckbox, floorMatsCarpetCheckbox,
+            dashboardCheckbox, engineSensorsAndFusesCheckbox, washerBottleCheckbox,
+            cigarLighterCheckbox, speakerCheckbox, radioCassetteCDCheckbox, engineCompartmentCheckbox,
+            computerBoxCheckbox, hornCheckbox;
+
+    DatabaseConfig databaseConfig;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form4);
 
-        RecyclerView recyclerView = findViewById(R.id.form5RecyclerView);
+        rearViewMirror = (EditText) findViewById(R.id.rearBumperEditText);
+        rearViewMirror = (EditText) findViewById(R.id.rearBumperCheckbox);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Form4Activity.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        windowSwitches = (EditText) findViewById(R.id.windowSwitchesEditText);
+        windowSwitchesCheckbox = (MaterialCheckBox) findViewById(R.id.windowSwitchesCheckbox);
 
-        List<ItemsModel> list = new ArrayList<>();
-        list.add(new ItemsModel("Rear View Mirror",0,""));
-        list.add(new ItemsModel("Window Switches",0,""));
-        list.add(new ItemsModel("Floor Mats/Carpet",0,""));
-        list.add(new ItemsModel("Dashboard",0,""));
-        list.add(new ItemsModel("Engine Sensors and Fuses",0,""));
-        list.add(new ItemsModel("Washer Bottle",0,""));
-        list.add(new ItemsModel("Cigar Lighter",0,""));
-        list.add(new ItemsModel("Speaker",0,""));
-        list.add(new ItemsModel("Radio/Cassette/CD",0,""));
-        list.add(new ItemsModel("Engine Compartment",0,""));
-        list.add(new ItemsModel("Computer Box",0,""));
-        list.add(new ItemsModel("Horn",0,""));
+        floorMatsCarpet = (EditText) findViewById(R.id.floorMatsCarpetEditText);
+        floorMatsCarpetCheckbox = (MaterialCheckBox) findViewById(R.id.floorMatsCarpetCheckbox);
 
-        Adapter adapter = new Adapter(list, Form4Activity.this);
+        dashboard = (EditText) findViewById(R.id.dashboardEditText);
+        dashboardCheckbox  = (MaterialCheckBox) findViewById(R.id.dashboardCheckbox);
 
-        recyclerView.setAdapter(adapter);
+        engineSensorsAndFuses = (EditText) findViewById(R.id.engineSensorsAndFusesEditText);
+        engineSensorsAndFusesCheckbox = (MaterialCheckBox) findViewById(R.id.engineSensorsAndFusesCheckbox);
 
-        FloatingActionButton floatingActionButton4 = (FloatingActionButton) findViewById(R.id.floatingActionButton4);
+        washerBottle = (EditText) findViewById(R.id.washerBottleEditText);
+        washerBottleCheckbox = (MaterialCheckBox) findViewById(R.id.washerBottleCheckbox);
 
-        floatingActionButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form4Activity.this, Form5Activity.class);
-                startActivity(i);
-                finish();
-            }
+        cigarLighter = (EditText) findViewById(R.id.cigarLighterEditText);
+        cigarLighterCheckbox = (MaterialCheckBox) findViewById(R.id.cigarLighterCheckbox);
+
+        speaker = (EditText) findViewById(R.id.speakerEditText);
+        speakerCheckbox = (MaterialCheckBox) findViewById(R.id.speakerCheckbox);
+
+        radioCassetteCD = (EditText) findViewById(R.id.radioCassetteCdEditText);
+        radioCassetteCDCheckbox = (MaterialCheckBox) findViewById(R.id.radioCassetteCdCheckbox);
+
+        engineCompartment = (EditText) findViewById(R.id.engineCompartmentEditText);
+        engineCompartmentCheckbox = (MaterialCheckBox) findViewById(R.id.engineCompartmentCheckbox);
+
+        computerBox = (EditText) findViewById(R.id.computerBoxEditText);
+        computerBoxCheckbox = (MaterialCheckBox) findViewById(R.id.computerBoxCheckbox);
+
+        horn = (EditText) findViewById(R.id.hornEditText);
+        hornCheckbox = (MaterialCheckBox) findViewById(R.id.hornCheckbox);
+
+        databaseConfig = DatabaseConfig.databaseGetInstance(Form4Activity.this);
+
+
+        FloatingActionButton floatingActionButton4 = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+
+        floatingActionButton4.setOnClickListener(view -> {
+            Intent i = new Intent(Form4Activity.this, Form5Activity.class);
+            startActivity(i);
+            finish();
         });
 
         ImageView imageView = (ImageView) findViewById(R.id.backButtonForm4);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form4Activity.this, Form3Activity.class);
-                startActivity(i);
-                finish();
-            }
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(Form4Activity.this, Form3Activity.class);
+            startActivity(i);
+            finish();
         });
     }
 }

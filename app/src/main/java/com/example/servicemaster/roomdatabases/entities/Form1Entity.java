@@ -13,6 +13,7 @@ public class Form1Entity {
     private String regNo;
     private String financier;
     private String customer;
+    private String motorist;
     private String email;
     private int telNo;
     private int idNo;
@@ -32,11 +33,12 @@ public class Form1Entity {
     private String towedBy;
 
 
-    @Ignore
-    public Form1Entity(String regNo, String financier, String customer, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
+    public Form1Entity(int id, String regNo, String financier, String customer, String motorist, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
+        this.id = id;
         this.regNo = regNo;
         this.financier = financier;
         this.customer = customer;
+        this.motorist = motorist;
         this.email = email;
         this.telNo = telNo;
         this.idNo = idNo;
@@ -56,11 +58,13 @@ public class Form1Entity {
         this.towedBy = towedBy;
     }
 
-    public Form1Entity(int id, String regNo, String financier, String customer, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
-        this.id = id;
+    @Ignore
+
+    public Form1Entity(String regNo, String financier, String customer, String motorist, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
         this.regNo = regNo;
         this.financier = financier;
         this.customer = customer;
+        this.motorist = motorist;
         this.email = email;
         this.telNo = telNo;
         this.idNo = idNo;
@@ -110,6 +114,14 @@ public class Form1Entity {
 
     public void setCustomer(String customer) {
         this.customer = customer;
+    }
+
+    public String getMotorist() {
+        return motorist;
+    }
+
+    public void setMotorist(String motorist) {
+        this.motorist = motorist;
     }
 
     public String getEmail() {

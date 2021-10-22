@@ -4,24 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.servicemaster.R;
-import com.example.servicemaster.activities.checkinforms.Form1Activity;
 import com.example.servicemaster.adapters.ActiveAdapter;
-import com.example.servicemaster.adapters.Adapter;
 import com.example.servicemaster.models.ActiveDataModel;
-import com.example.servicemaster.models.ActiveModel;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
-import com.example.servicemaster.roomdatabases.entities.Form1Entity;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ActiveActivity extends AppCompatActivity {

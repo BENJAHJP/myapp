@@ -1,15 +1,13 @@
 package com.example.servicemaster.activities.checkinforms;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicemaster.R;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
@@ -24,7 +22,6 @@ public class Form2Activity extends AppCompatActivity {
     DatabaseConfig databaseConfig;
 
     EditText insuranceStickerTextInput, inspectionStickerTextInput, claimNoTextInput;
-    String insuranceStickerText, inspectionStickerText, claimNoText, serviceAdvisorText;
 
     Spinner serviceAdvisorSpinnerInput;
 
@@ -50,30 +47,35 @@ public class Form2Activity extends AppCompatActivity {
                 R.layout.support_simple_spinner_dropdown_item,serviceAdvisorList);
         serviceAdvisorSpinnerInput.setAdapter(serviceAdvisorAdapter);
 
+
+        int id = getIntent().getExtras().getInt("id");
+
+        if(databaseConfig.form2Dao().getData(id)){
+            Form2Entity form2Entity = databaseConfig.form2Dao().getRow(id);
+            insuranceStickerTextInput.setText(form2Entity.getInsuranceSticker());
+            inspectionStickerTextInput.setText(form2Entity.getInspectionSticker());
+            claimNoTextInput.setText(form2Entity.getClaimNo());
+        }
+
         FloatingActionButton floatingActionButton2 = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
 
-        floatingActionButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                databaseConfig.form2Dao().insertData(new Form2Entity(insuranceStickerTextInput.getText().toString(),
-                        inspectionStickerTextInput.getText().toString(),
-                        claimNoTextInput.getText().toString(),serviceAdvisorSpinnerInput.getSelectedItem().toString()));
-                Intent i = new Intent(Form2Activity.this, Form3Activity.class);
-                startActivity(i);
-                finish();
-            }
+        floatingActionButton2.setOnClickListener(view -> {
+            databaseConfig.form2Dao().insertData(new Form2Entity(insuranceStickerTextInput.getText().toString(),
+                    inspectionStickerTextInput.getText().toString(),
+                    claimNoTextInput.getText().toString(),serviceAdvisorSpinnerInput.getSelectedItem().toString()));
+            Intent i = new Intent(Form2Activity.this, Form3Activity.class);
+            i.putExtra("id",databaseConfig.form2Dao().getLastID());
+            startActivity(i);
+            finish();
         });
 
         ImageView imageView = (ImageView) findViewById(R.id.backButtonForm2);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form2Activity.this, Form1Activity.class);
-                startActivity(i);
-                finish();
-            }
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(Form2Activity.this, Form1Activity.class);
+            i.putExtra("id", id);
+            startActivity(i);
+            finish();
         });
 
     }

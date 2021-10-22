@@ -16,16 +16,14 @@ public interface Form3Dao {
     @Update
     void updateData(Form3Entity form3Entity);
 
-    @Query("SELECT EXISTS(SELECT 1 FROM Form3 WHERE regNo = :regNo LIMIT 1)")
-    boolean fieldExists(String regNo);
+    @Query("SELECT EXISTS(SELECT 1 FROM Form3 WHERE id = :id LIMIT 1)")
+    boolean getData(int id);
 
-    @Query("SELECT * FROM Form3 WHERE regNo = :regNo")
-    Form3Entity GetField(String regNo);
+    @Query("SELECT * FROM Form3 WHERE id = :id")
+    Form3Entity getRow(int id);
 
-    @Query("UPDATE Form3 SET checked = :checked WHERE regNo = :regNo")
-    void saveChecked(int checked, String regNo);
+    @Query("SELECT MAX(id) FROM Form3")
+    int getLastID();
 
-    @Query("UPDATE Form3 SET remarks = :remarks WHERE regNo = :regNo")
-    void updateRemarks(String remarks, String regNo);
 
 }

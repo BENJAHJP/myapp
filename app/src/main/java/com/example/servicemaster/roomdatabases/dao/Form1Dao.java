@@ -18,4 +18,13 @@ public interface Form1Dao {
     @Query("SELECT regNo,customer,jobType,duration FROM Form1")
     List<ActiveDataModel> getMyData();
 
+    @Query("SELECT EXISTS(SELECT 1 FROM Form1 WHERE id = :id LIMIT 1)")
+    boolean getData(int id);
+
+    @Query("SELECT * FROM Form1 WHERE id = :id")
+    Form1Entity getRow(int id);
+
+    @Query("SELECT MAX(id) FROM Form1")
+    int getLastID();
+
 }

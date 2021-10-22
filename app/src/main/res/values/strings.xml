@@ -53,36 +53,72 @@
     <string name="form3Title">Exterior</string>
     <string name="checked">Yes/No</string>
     <string name="remarks">Remarks</string>
+    <string name="overallAppearance">Overall Appearance</string>
+    <string name="sideMirrors">Side Mirrors</string>
+    <string name="noOfKeys">No. of Keys</string>
+    <string name="fogSpotLights">Fog/Spot Lights</string>
+    <string name="antennaAerial">Antenna/Aerial</string>
+    <string name="regNoPlateFront">Reg. No. Plate Front</string>
+    <string name="frontBumper">Front Bumper</string>
+    <string name="fuelTankCap">Fuel Tank Cap</string>
+    <string name="frontWindscreen">Front Windscreen</string>
+    <string name="rearWindscreen">Rear Windscreen</string>
+    <string name="headLightsLenses">Head Lights Lenses</string>
+    <string name="tailLightsLenses">Tail Lights Lenses</string>
+    <string name="wipers">Wipers</string>
+    <string name="regNoPlateRear">Reg. Number Plate Rear</string>
+    <string name="rearBumper">Rear Bumper</string>
 
     <!-- form4 activity -->
     <string name="form4Title">Interior</string>
+    <string name="rearViewMirror">Rear View Mirror</string>
+    <string name="windowSwitches">Window Switches</string>
+    <string name="floorMatsCarpet">Floor Mats/Carpet</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="engineSensorsAndFuses">Engine Sensors And Fuses</string>
+    <string name="washerBottle">Washer Bottle</string>
+    <string name="cigarLighter">Cigar Lighter</string>
+    <string name="speaker">Speaker</string>
+    <string name="radioCassetteCd">Radio/Cassette/CD</string>
+    <string name="engineCompartment">Engine Compartment</string>
+    <string name="computerBox">Computer Box</string>
+    <string name="horn">Horn</string>
 
     <!-- form5 activity -->
     <string name="form5Title">Wheels</string>
+    <string name="wheelsRims">Wheels Rims</string>
+    <string name="wheelsCapsHubs">Wheels Caps/Hubs</string>
+    <string name="mudflap">Mudflap</string>
+    <string name="steeringWheel">Steering Wheel</string>
 
     <!-- form6 activity -->
     <string name="form6Title">Tyres and battery</string>
     <string name="serialNo">Serial No.</string>
     <string name="condition">Condition</string>
+    <string name="rhsf">RHSF</string>
+    <string name="rhsr">RHSR</string>
+    <string name="lhsf">LHSF</string>
+    <string name="lhsr">LHSR</string>
+    <string name="sWheel">S/Wheel</string>
+    <string name="battery">Battery</string>
 
     <!-- form7 activity -->
     <string name="form7Title">Standard Tools</string>
     <string name="general">General remarks/Work to be done</string>
+    <string name="jackAndHandler">Jack And Handler</string>
+    <string name="lifeSavers">Life Savers</string>
+    <string name="spacialNut">Spacial Nut</string>
+    <string name="towingPin">Towing Pin</string>
+    <string name="jumperCables">Jumper Cable</string>
+    <string name="wheelSpanner">Wheel Spanner</string>
+    <string name="fireExtinguisher">Fire Extinguisher</string>
+    <string name="firstAidKit">First Aid Kit</string>
+    <string name="towingRope">Towing Rope</string>
+    <string name="ownersManual">Owners Manual</string>
 
-    <!-- form7 activity -->
+    <!-- form8 activity -->
     <string name="form8Title">Image Capture</string>
     <string name="submit">Submit</string>
     <string name="title_activity_form_inputs">FormInputsActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>

@@ -1,64 +1,59 @@
 package com.example.servicemaster.activities.checkinforms;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.servicemaster.adapters.Adapter;
-import com.example.servicemaster.models.ItemsModel;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.servicemaster.R;
+import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Form5Activity extends AppCompatActivity {
+
+    DatabaseConfig databaseConfig;
+
+    EditText wheelsRims, wheelsCapsHubs, mudFlap, steeringWheel;
+
+    MaterialCheckBox wheelsRimsCheckbox, wheelsCapsHubsCheckbox, mudFlapCheckbox, steeringWheelCheckbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form5);
 
-        RecyclerView recyclerView = findViewById(R.id.form5RecyclerView);
+        wheelsRims = (EditText) findViewById(R.id.wheelsRimsEditText);
+        wheelsRimsCheckbox = (MaterialCheckBox) findViewById(R.id.wheelsRimsCheckbox);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Form5Activity.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        wheelsCapsHubs = (EditText) findViewById(R.id.wheelsCapsHubsEditText);
+        wheelsCapsHubsCheckbox = (MaterialCheckBox) findViewById(R.id.wheelsCapsHubsCheckbox);
 
-        List<ItemsModel> list = new ArrayList<>();
-        list.add(new ItemsModel("Wheel Rims",0,""));
-        list.add(new ItemsModel("Wheel Caps/Hubs",0,""));
-        list.add(new ItemsModel("Mudflap",0,""));
-        list.add(new ItemsModel("Steering Wheel",0,""));
+        mudFlap = (EditText) findViewById(R.id.mudflapEditText);
+        mudFlapCheckbox = (MaterialCheckBox) findViewById(R.id.mudflapCheckbox);
 
-        Adapter adapter = new Adapter(list,Form5Activity.this);
+        steeringWheel = (EditText) findViewById(R.id.steeringWheelEditText);
+        steeringWheelCheckbox = (MaterialCheckBox) findViewById(R.id.steeringWheelCheckbox);
 
-        recyclerView.setAdapter(adapter);
+        databaseConfig = DatabaseConfig.databaseGetInstance(Form5Activity.this);
+
 
         FloatingActionButton floatingActionButton5 = (FloatingActionButton) findViewById(R.id.floatingActionButton5);
 
-        floatingActionButton5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form5Activity.this, Form6Activity.class);
-                startActivity(i);
-                finish();
-            }
+        floatingActionButton5.setOnClickListener(view -> {
+            Intent i = new Intent(Form5Activity.this, Form6Activity.class);
+            startActivity(i);
+            finish();
         });
 
         ImageView imageView = (ImageView) findViewById(R.id.backButtonForm5);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form5Activity.this, Form4Activity.class);
-                startActivity(i);
-                finish();
-            }
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(Form5Activity.this, Form4Activity.class);
+            startActivity(i);
+            finish();
         });
     }
 }

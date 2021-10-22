@@ -1,71 +1,79 @@
 package com.example.servicemaster.activities.checkinforms;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.servicemaster.adapters.Adapter;
-import com.example.servicemaster.models.ItemsModel;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.servicemaster.R;
+import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Form7Activity extends AppCompatActivity {
+
+    DatabaseConfig databaseConfig;
+
+    EditText jackAndHandler, lifeSavers, spacialNut, towingPin, jumperCables, wheelSpanner, fireExtinguisher,
+            firstAidKit, towingRope, ownersManual;
+
+    MaterialCheckBox jackAndHandlerCheckbox, lifeSaversCheckbox, spacialNutCheckbox, towingPinCheckbox
+            , jumperCablesCheckbox, wheelSpannerCheckbox, fireExtinguisherCheckbox,
+            firstAidKitCheckbox, towingRopeCheckbox, ownersManualCheckbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form7);
 
-        RecyclerView recyclerView = findViewById(R.id.form7RecyclerView);
+        databaseConfig = DatabaseConfig.databaseGetInstance(Form7Activity.this);
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Form7Activity.this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        jackAndHandler = (EditText) findViewById(R.id.jackAndHandlerEditText);
+        jackAndHandlerCheckbox = (MaterialCheckBox) findViewById(R.id.jackAndHandlerCheckbox);
 
-        List<ItemsModel> list = new ArrayList<>();
-        list.add(new ItemsModel("Jack & Handle",0,""));
-        list.add(new ItemsModel("Life Savers",0,""));
-        list.add(new ItemsModel("Spacial Nut",0,""));
-        list.add(new ItemsModel("Towing Pin",0,""));
-        list.add(new ItemsModel("Jumper Cables",0,""));
-        list.add(new ItemsModel("Wheel Spanner",0,""));
-        list.add(new ItemsModel("Fire Extinguisher",0,""));
-        list.add(new ItemsModel("First Aid Kit",0,""));
-        list.add(new ItemsModel("Towing Rope",0,""));
-        list.add(new ItemsModel("Owners Manual",0,""));
+        lifeSavers = (EditText) findViewById(R.id.lifeSaversEditText);
+        lifeSaversCheckbox = (MaterialCheckBox) findViewById(R.id.lifeSaversCheckbox);
 
-        Adapter adapter = new Adapter(list,Form7Activity.this);
+        spacialNut = (EditText) findViewById(R.id.spacialNutEditText);
+        spacialNutCheckbox = (MaterialCheckBox) findViewById(R.id.spacialNutCheckbox);
 
-        recyclerView.setAdapter(adapter);
+        towingPin = (EditText) findViewById(R.id.towingPinEditText);
+        towingPinCheckbox = (MaterialCheckBox) findViewById(R.id.towingPinCheckbox);
 
+        jumperCables = (EditText) findViewById(R.id.jumperCablesEditText);
+        jumperCablesCheckbox = (MaterialCheckBox) findViewById(R.id.jumperCablesCheckbox);
+
+        wheelSpanner = (EditText) findViewById(R.id.wheelSpannerEditText);
+        wheelSpannerCheckbox = (MaterialCheckBox) findViewById(R.id.wheelSpannerCheckbox);
+
+        fireExtinguisher = (EditText) findViewById(R.id.fireExtinguisherEditText);
+        fireExtinguisherCheckbox = (MaterialCheckBox) findViewById(R.id.fireExtinguisherCheckbox);
+
+        firstAidKit = (EditText) findViewById(R.id.firstAidKitEditText);
+        firstAidKitCheckbox = (MaterialCheckBox) findViewById(R.id.firstAidKitCheckbox);
+
+        towingRope = (EditText) findViewById(R.id.towingRopeEditText);
+        towingRopeCheckbox = (MaterialCheckBox) findViewById(R.id.towingRopeCheckbox);
+
+        ownersManual = (EditText) findViewById(R.id.ownersManualEditText);
+        ownersManualCheckbox = (MaterialCheckBox) findViewById(R.id.ownersManualCheckbox);
 
         ImageView imageView = (ImageView) findViewById(R.id.backButtonForm7);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form7Activity.this, Form6Activity.class);
-                startActivity(i);
-                finish();
-            }
+        imageView.setOnClickListener(view -> {
+            Intent i = new Intent(Form7Activity.this, Form6Activity.class);
+            startActivity(i);
+            finish();
         });
 
         FloatingActionButton floatingActionButton7 = (FloatingActionButton) findViewById(R.id.floatingActionButton7);
 
-        floatingActionButton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Form7Activity.this, Form8Activity.class);
-                startActivity(i);
-                finish();
-            }
+        floatingActionButton7.setOnClickListener(view -> {
+            Intent i = new Intent(Form7Activity.this, Form8Activity.class);
+            startActivity(i);
+            finish();
         });
 
     }

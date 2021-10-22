@@ -38,24 +38,308 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/form6RecyclerView"
+            android:orientation="vertical"
+            >
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="20dp"
-                android:layout_marginStart="0dp"
-                />
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/rhsfTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/rhsf" />
+
+                <EditText
+                    android:id="@+id/rhsfMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/rhsfSerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/rhsfConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/rhsrTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/rhsr" />
+
+                <EditText
+                    android:id="@+id/rhsrMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/rhsrSerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/rhsrConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/lhsfTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/lhsf" />
+
+                <EditText
+                    android:id="@+id/lhsfMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/lhsfSerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/lhsfConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/lhsrTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/lhsr" />
+
+                <EditText
+                    android:id="@+id/lhsrMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/lhsrSerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/lhsrConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/sWheelTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/sWheel" />
+
+                <EditText
+                    android:id="@+id/sWheelMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/sWheelSerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/sWheelConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/batteryTextView"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:text="text" />
+
+                <EditText
+                    android:id="@+id/batteryMakeEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/make"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+                <EditText
+                    android:id="@+id/batterySerialNoEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/serialNo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+
+                <EditText
+                    android:id="@+id/batteryConditionEditText"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/condition"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="5dp" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton6"
@@ -72,5 +356,7 @@
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

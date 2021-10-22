@@ -45,21 +45,467 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/form5RecyclerView"
+            <LinearLayout
+                android:layout_marginStart="0dp"
+                android:padding="5dp"
+                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginBottom="20dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/rearViewMirrorText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rearViewMirror"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rearViewMirrorCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/rearViewMirrorEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginStart="0dp"
-                />
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/windowSwitchesText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/windowSwitches"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/windowSwitchesCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/windowSwitchesEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/floorMatsCarpetText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/floorMatsCarpet"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/floorMatsCarpetCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/floorMatsCarpetEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/dashboardText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboard"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dashboardCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/dashboardEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/engineSensorsAndFusesText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/engineSensorsAndFuses"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/engineSensorsAndFusesCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/engineSensorsAndFusesEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/washerBottleText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/washerBottle"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/washerBottleCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/washerBottleEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/cigarLighterText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cigarLighter"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cigarLighterCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/cigarLighterEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/speakerText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/speaker"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speakerCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/speakerEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/radioCassetteCdText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radioCassetteCd"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioCassetteCdCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/radioCassetteCdEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/engineCompartmentText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/engineCompartment"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/engineCompartmentCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/engineCompartmentEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/computerBoxText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/computerBox"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/computerBoxCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/computerBoxEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_marginStart="7dp"
+                    android:id="@+id/hornText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/horn"
+                    />
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hornCheckbox"
+                    />
+
+                <EditText
+                    android:id="@+id/hornEditText"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/text_input"
+                    android:hint="@string/remarks"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton4"
+        android:id="@+id/floatingActionButton3"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="280dp"

@@ -22,37 +22,26 @@ public class DashboardActivity extends AppCompatActivity {
         MaterialCardView completedCardButton = (MaterialCardView) findViewById(R.id.completedCardButton);
         ImageButton imageButton = (ImageButton) findViewById(R.id.logoutButton);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(DashboardActivity.this, LoginActivity.class);
-                startActivity(i);
-                finish();
-            }
+        imageButton.setOnClickListener(view -> {
+            Intent i = new Intent(DashboardActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
         });
 
-        checkInCardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(DashboardActivity.this, Form1Activity.class);
-                startActivity(i);
-            }
+        checkInCardButton.setOnClickListener(view -> {
+            Intent i = new Intent(DashboardActivity.this, Form1Activity.class);
+            i.putExtra("id",0);
+            startActivity(i);
         });
 
-        activeCardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(DashboardActivity.this, ActiveActivity.class);
-                startActivity(i);
-            }
+        activeCardButton.setOnClickListener(view -> {
+            Intent i = new Intent(DashboardActivity.this, ActiveActivity.class);
+            startActivity(i);
         });
 
-        completedCardButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(DashboardActivity.this, CompletedActivity.class);
-                startActivity(i);
-            }
+        completedCardButton.setOnClickListener(view -> {
+            Intent i = new Intent(DashboardActivity.this, CompletedActivity.class);
+            startActivity(i);
         });
     }
 }
