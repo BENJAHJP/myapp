@@ -1,9 +1,7 @@
 package com.example.servicemaster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import com.example.servicemaster.R;
 
 public class CompletedActivity extends AppCompatActivity {

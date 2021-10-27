@@ -15,8 +15,8 @@ public class Form1Entity {
     private String customer;
     private String motorist;
     private String email;
-    private int telNo;
-    private int idNo;
+    private String telNo;
+    private String idNo;
     private String dateIn;
     private String jobType;
     private String duration;
@@ -32,8 +32,7 @@ public class Form1Entity {
     private String manualJobCardNo;
     private String towedBy;
 
-
-    public Form1Entity(int id, String regNo, String financier, String customer, String motorist, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
+    public Form1Entity(int id, String regNo, String financier, String customer, String motorist, String email, String telNo, String idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
         this.id = id;
         this.regNo = regNo;
         this.financier = financier;
@@ -59,8 +58,7 @@ public class Form1Entity {
     }
 
     @Ignore
-
-    public Form1Entity(String regNo, String financier, String customer, String motorist, String email, int telNo, int idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
+    public Form1Entity(String regNo, String financier, String customer, String motorist, String email, String telNo, String idNo, String dateIn, String jobType, String duration, String promisedDate, String postalAddress, String make, String model, String chassisNo, String engineNo, String vinNo, String fuel, String odometer, String manualJobCardNo, String towedBy) {
         this.regNo = regNo;
         this.financier = financier;
         this.customer = customer;
@@ -132,19 +130,19 @@ public class Form1Entity {
         this.email = email;
     }
 
-    public int getTelNo() {
+    public String getTelNo() {
         return telNo;
     }
 
-    public void setTelNo(int telNo) {
+    public void setTelNo(String telNo) {
         this.telNo = telNo;
     }
 
-    public int getIdNo() {
+    public String getIdNo() {
         return idNo;
     }
 
-    public void setIdNo(int idNo) {
+    public void setIdNo(String idNo) {
         this.idNo = idNo;
     }
 

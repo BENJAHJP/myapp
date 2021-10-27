@@ -4,23 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
+
 import com.example.servicemaster.R;
 import com.example.servicemaster.activities.checkinforms.Form1Activity;
 import com.google.android.material.card.MaterialCardView;
 
 public class DashboardActivity extends AppCompatActivity {
 
+    MaterialCardView checkInCardButton, activeCardButton, completedCardButton;
+    ImageButton imageButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        MaterialCardView checkInCardButton = (MaterialCardView) findViewById(R.id.checkinCardButton);
-        MaterialCardView activeCardButton = (MaterialCardView) findViewById(R.id.activeCardButton);
-        MaterialCardView completedCardButton = (MaterialCardView) findViewById(R.id.completedCardButton);
-        ImageButton imageButton = (ImageButton) findViewById(R.id.logoutButton);
+        checkInCardButton =  findViewById(R.id.checkinCardButton);
+        activeCardButton =  findViewById(R.id.activeCardButton);
+        completedCardButton = findViewById(R.id.completedCardButton);
+        imageButton = findViewById(R.id.logoutButton);
 
         imageButton.setOnClickListener(view -> {
             Intent i = new Intent(DashboardActivity.this, LoginActivity.class);

@@ -13,9 +13,6 @@ public interface Form3Dao {
     @Insert
     void insertData(Form3Entity form3Entity);
 
-    @Update
-    void updateData(Form3Entity form3Entity);
-
     @Query("SELECT EXISTS(SELECT 1 FROM Form3 WHERE id = :id LIMIT 1)")
     boolean getData(int id);
 

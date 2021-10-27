@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicemaster.R;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.example.servicemaster.roomdatabases.entities.Form4Entity;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,54 +30,109 @@ public class Form4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form4);
 
-        rearViewMirror = (EditText) findViewById(R.id.rearBumperEditText);
-        rearViewMirror = (EditText) findViewById(R.id.rearBumperCheckbox);
+        rearViewMirror = findViewById(R.id.rearViewMirrorEditText);
+        rearViewMirrorCheckbox = findViewById(R.id.rearViewMirrorCheckbox);
 
-        windowSwitches = (EditText) findViewById(R.id.windowSwitchesEditText);
-        windowSwitchesCheckbox = (MaterialCheckBox) findViewById(R.id.windowSwitchesCheckbox);
+        windowSwitches = findViewById(R.id.windowSwitchesEditText);
+        windowSwitchesCheckbox = findViewById(R.id.windowSwitchesCheckbox);
 
-        floorMatsCarpet = (EditText) findViewById(R.id.floorMatsCarpetEditText);
-        floorMatsCarpetCheckbox = (MaterialCheckBox) findViewById(R.id.floorMatsCarpetCheckbox);
+        floorMatsCarpet = findViewById(R.id.floorMatsCarpetEditText);
+        floorMatsCarpetCheckbox = findViewById(R.id.floorMatsCarpetCheckbox);
 
-        dashboard = (EditText) findViewById(R.id.dashboardEditText);
-        dashboardCheckbox  = (MaterialCheckBox) findViewById(R.id.dashboardCheckbox);
+        dashboard = findViewById(R.id.dashboardEditText);
+        dashboardCheckbox  = findViewById(R.id.dashboardCheckbox);
 
-        engineSensorsAndFuses = (EditText) findViewById(R.id.engineSensorsAndFusesEditText);
-        engineSensorsAndFusesCheckbox = (MaterialCheckBox) findViewById(R.id.engineSensorsAndFusesCheckbox);
+        engineSensorsAndFuses = findViewById(R.id.engineSensorsAndFusesEditText);
+        engineSensorsAndFusesCheckbox = findViewById(R.id.engineSensorsAndFusesCheckbox);
 
-        washerBottle = (EditText) findViewById(R.id.washerBottleEditText);
-        washerBottleCheckbox = (MaterialCheckBox) findViewById(R.id.washerBottleCheckbox);
+        washerBottle = findViewById(R.id.washerBottleEditText);
+        washerBottleCheckbox = findViewById(R.id.washerBottleCheckbox);
 
-        cigarLighter = (EditText) findViewById(R.id.cigarLighterEditText);
-        cigarLighterCheckbox = (MaterialCheckBox) findViewById(R.id.cigarLighterCheckbox);
+        cigarLighter = findViewById(R.id.cigarLighterEditText);
+        cigarLighterCheckbox = findViewById(R.id.cigarLighterCheckbox);
 
-        speaker = (EditText) findViewById(R.id.speakerEditText);
-        speakerCheckbox = (MaterialCheckBox) findViewById(R.id.speakerCheckbox);
+        speaker = findViewById(R.id.speakerEditText);
+        speakerCheckbox = findViewById(R.id.speakerCheckbox);
 
-        radioCassetteCD = (EditText) findViewById(R.id.radioCassetteCdEditText);
-        radioCassetteCDCheckbox = (MaterialCheckBox) findViewById(R.id.radioCassetteCdCheckbox);
+        radioCassetteCD = findViewById(R.id.radioCassetteCdEditText);
+        radioCassetteCDCheckbox = findViewById(R.id.radioCassetteCdCheckbox);
 
-        engineCompartment = (EditText) findViewById(R.id.engineCompartmentEditText);
-        engineCompartmentCheckbox = (MaterialCheckBox) findViewById(R.id.engineCompartmentCheckbox);
+        engineCompartment = findViewById(R.id.engineCompartmentEditText);
+        engineCompartmentCheckbox = findViewById(R.id.engineCompartmentCheckbox);
 
-        computerBox = (EditText) findViewById(R.id.computerBoxEditText);
-        computerBoxCheckbox = (MaterialCheckBox) findViewById(R.id.computerBoxCheckbox);
+        computerBox = findViewById(R.id.computerBoxEditText);
+        computerBoxCheckbox = findViewById(R.id.computerBoxCheckbox);
 
-        horn = (EditText) findViewById(R.id.hornEditText);
-        hornCheckbox = (MaterialCheckBox) findViewById(R.id.hornCheckbox);
+        horn = findViewById(R.id.hornEditText);
+        hornCheckbox = findViewById(R.id.hornCheckbox);
 
         databaseConfig = DatabaseConfig.databaseGetInstance(Form4Activity.this);
 
+        int id = databaseConfig.form4Dao().getLastID();
 
-        FloatingActionButton floatingActionButton4 = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+
+        if(databaseConfig.form4Dao().getData(id)){
+            Form4Entity form4Entity = databaseConfig.form4Dao().getRow(id);
+            rearViewMirror.setText(form4Entity.getRearViewMirrorRemarks());
+            rearViewMirrorCheckbox.setChecked(form4Entity.isRearViewMirrorCheckbox());
+
+            windowSwitches.setText(form4Entity.getWindowSwitchesRemarks());
+            windowSwitchesCheckbox.setChecked(form4Entity.isWindowSwitchesCheckbox());
+
+            floorMatsCarpet.setText(form4Entity.getFloorMatsCarpetRemarks());
+            floorMatsCarpetCheckbox.setChecked(form4Entity.isFloorMatsCarpetCheckbox());
+
+            dashboard.setText(form4Entity.getDashboardRemarks());
+            dashboardCheckbox.setChecked(form4Entity.isDashboardCheckbox());
+
+            engineSensorsAndFuses.setText(form4Entity.getEngineSensorsAndFusesRemarks());
+            engineSensorsAndFusesCheckbox.setChecked(form4Entity.isEngineSensorsAndFusesCheckbox());
+
+            washerBottle.setText(form4Entity.getWasherBottlesRemarks());
+            washerBottleCheckbox.setChecked(form4Entity.isWasherBottlesCheckbox());
+
+            cigarLighter.setText(form4Entity.getCigarLighterRemarks());
+            cigarLighterCheckbox.setChecked(form4Entity.isCigarLighterCheckbox());
+
+            speaker.setText(form4Entity.getSpeakerRemarks());
+            speakerCheckbox.setChecked(form4Entity.isSpeakerCheckbox());
+
+            radioCassetteCD.setText(form4Entity.getRadioCassetteCdRemarks());
+            radioCassetteCDCheckbox.setChecked(form4Entity.isRadioCassetteCdCheckbox());
+
+            engineCompartment.setText(form4Entity.getEngineCompartmentRemarks());
+            engineCompartmentCheckbox.setChecked(form4Entity.isEngineCompartmentCheckbox());
+
+            computerBox.setText(form4Entity.getComputerBoxRemarks());
+            computerBoxCheckbox.setChecked(form4Entity.isComputerBoxCheckbox());
+
+            horn.setText(form4Entity.getHornRemarks());
+            hornCheckbox.setChecked(form4Entity.isHornCheckbox());
+
+        }
+
+
+        FloatingActionButton floatingActionButton4 = findViewById(R.id.floatingActionButton3);
 
         floatingActionButton4.setOnClickListener(view -> {
+            databaseConfig.form4Dao().insertData(new Form4Entity(rearViewMirror.getText().toString(), rearViewMirrorCheckbox.isChecked(),
+                    windowSwitches.getText().toString(), windowSwitchesCheckbox.isChecked(),
+                    floorMatsCarpet.getText().toString(), floorMatsCarpetCheckbox.isChecked(),
+                    dashboard.getText().toString(), dashboardCheckbox.isChecked(),
+                    engineSensorsAndFuses.getText().toString(), engineSensorsAndFusesCheckbox.isChecked(),
+                    washerBottle.getText().toString(), washerBottleCheckbox.isChecked(),
+                    cigarLighter.getText().toString(), cigarLighterCheckbox.isChecked(),
+                    speaker.getText().toString(), speakerCheckbox.isChecked(),
+                    radioCassetteCD.getText().toString(), radioCassetteCDCheckbox.isChecked(),
+                    engineCompartment.getText().toString(), engineCompartmentCheckbox.isChecked(),
+                    computerBox.getText().toString(), computerBoxCheckbox.isChecked(),
+                    horn.getText().toString(), hornCheckbox.isChecked()));
             Intent i = new Intent(Form4Activity.this, Form5Activity.class);
             startActivity(i);
             finish();
         });
 
-        ImageView imageView = (ImageView) findViewById(R.id.backButtonForm4);
+        ImageView imageView = findViewById(R.id.backButtonForm4);
 
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(Form4Activity.this, Form3Activity.class);

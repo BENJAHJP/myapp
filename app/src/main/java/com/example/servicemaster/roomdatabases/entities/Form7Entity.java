@@ -11,36 +11,36 @@ public class Form7Entity {
     private int id;
 
     private String jackAndHandlerRemarks;
-    private int jackAndHandlerCheckbox;
+    private boolean jackAndHandlerCheckbox;
 
     private String lifeSaversRemarks;
-    private int lifeSaversCheckbox;
+    private boolean lifeSaversCheckbox;
 
     private String spacialNutRemarks;
-    private int spacialNutCheckbox;
+    private boolean spacialNutCheckbox;
 
     private String towingPinRemarks;
-    private int towingPinCheckbox;
+    private boolean towingPinCheckbox;
 
     private String jumperCablesRemarks;
-    private int jumperCablesCheckbox;
+    private boolean jumperCablesCheckbox;
 
     private String wheelSpannerRemarks;
-    private int wheelSpannerCheckbox;
+    private boolean wheelSpannerCheckbox;
 
     private String fireExtinguisherRemarks;
-    private int fireExtinguisherCheckbox;
+    private boolean fireExtinguisherCheckbox;
 
     private String firstAidKitRemarks;
-    private int firstAidKitCheckbox;
+    private boolean firstAidKitCheckbox;
 
     private String towingRopeRemarks;
-    private int towingRopeCheckbox;
+    private boolean towingRopeCheckbox;
 
     private String ownersManualRemarks;
-    private int ownersManualCheckbox;
+    private boolean ownersManualCheckbox;
 
-    public Form7Entity(int id, String jackAndHandlerRemarks, int jackAndHandlerCheckbox, String lifeSaversRemarks, int lifeSaversCheckbox, String spacialNutRemarks, int spacialNutCheckbox, String towingPinRemarks, int towingPinCheckbox, String jumperCablesRemarks, int jumperCablesCheckbox, String wheelSpannerRemarks, int wheelSpannerCheckbox, String fireExtinguisherRemarks, int fireExtinguisherCheckbox, String firstAidKitRemarks, int firstAidKitCheckbox, String towingRopeRemarks, int towingRopeCheckbox, String ownersManualRemarks, int ownersManualCheckbox) {
+    public Form7Entity(int id, String jackAndHandlerRemarks, boolean jackAndHandlerCheckbox, String lifeSaversRemarks, boolean lifeSaversCheckbox, String spacialNutRemarks, boolean spacialNutCheckbox, String towingPinRemarks, boolean towingPinCheckbox, String jumperCablesRemarks, boolean jumperCablesCheckbox, String wheelSpannerRemarks, boolean wheelSpannerCheckbox, String fireExtinguisherRemarks, boolean fireExtinguisherCheckbox, String firstAidKitRemarks, boolean firstAidKitCheckbox, String towingRopeRemarks, boolean towingRopeCheckbox, String ownersManualRemarks, boolean ownersManualCheckbox) {
         this.id = id;
         this.jackAndHandlerRemarks = jackAndHandlerRemarks;
         this.jackAndHandlerCheckbox = jackAndHandlerCheckbox;
@@ -65,7 +65,7 @@ public class Form7Entity {
     }
 
     @Ignore
-    public Form7Entity(String jackAndHandlerRemarks, int jackAndHandlerCheckbox, String lifeSaversRemarks, int lifeSaversCheckbox, String spacialNutRemarks, int spacialNutCheckbox, String towingPinRemarks, int towingPinCheckbox, String jumperCablesRemarks, int jumperCablesCheckbox, String wheelSpannerRemarks, int wheelSpannerCheckbox, String fireExtinguisherRemarks, int fireExtinguisherCheckbox, String firstAidKitRemarks, int firstAidKitCheckbox, String towingRopeRemarks, int towingRopeCheckbox, String ownersManualRemarks, int ownersManualCheckbox) {
+    public Form7Entity(String jackAndHandlerRemarks, boolean jackAndHandlerCheckbox, String lifeSaversRemarks, boolean lifeSaversCheckbox, String spacialNutRemarks, boolean spacialNutCheckbox, String towingPinRemarks, boolean towingPinCheckbox, String jumperCablesRemarks, boolean jumperCablesCheckbox, String wheelSpannerRemarks, boolean wheelSpannerCheckbox, String fireExtinguisherRemarks, boolean fireExtinguisherCheckbox, String firstAidKitRemarks, boolean firstAidKitCheckbox, String towingRopeRemarks, boolean towingRopeCheckbox, String ownersManualRemarks, boolean ownersManualCheckbox) {
         this.jackAndHandlerRemarks = jackAndHandlerRemarks;
         this.jackAndHandlerCheckbox = jackAndHandlerCheckbox;
         this.lifeSaversRemarks = lifeSaversRemarks;
@@ -104,11 +104,11 @@ public class Form7Entity {
         this.jackAndHandlerRemarks = jackAndHandlerRemarks;
     }
 
-    public int getJackAndHandlerCheckbox() {
+    public boolean isJackAndHandlerCheckbox() {
         return jackAndHandlerCheckbox;
     }
 
-    public void setJackAndHandlerCheckbox(int jackAndHandlerCheckbox) {
+    public void setJackAndHandlerCheckbox(boolean jackAndHandlerCheckbox) {
         this.jackAndHandlerCheckbox = jackAndHandlerCheckbox;
     }
 
@@ -120,11 +120,11 @@ public class Form7Entity {
         this.lifeSaversRemarks = lifeSaversRemarks;
     }
 
-    public int getLifeSaversCheckbox() {
+    public boolean isLifeSaversCheckbox() {
         return lifeSaversCheckbox;
     }
 
-    public void setLifeSaversCheckbox(int lifeSaversCheckbox) {
+    public void setLifeSaversCheckbox(boolean lifeSaversCheckbox) {
         this.lifeSaversCheckbox = lifeSaversCheckbox;
     }
 
@@ -136,11 +136,11 @@ public class Form7Entity {
         this.spacialNutRemarks = spacialNutRemarks;
     }
 
-    public int getSpacialNutCheckbox() {
+    public boolean isSpacialNutCheckbox() {
         return spacialNutCheckbox;
     }
 
-    public void setSpacialNutCheckbox(int spacialNutCheckbox) {
+    public void setSpacialNutCheckbox(boolean spacialNutCheckbox) {
         this.spacialNutCheckbox = spacialNutCheckbox;
     }
 
@@ -152,11 +152,11 @@ public class Form7Entity {
         this.towingPinRemarks = towingPinRemarks;
     }
 
-    public int getTowingPinCheckbox() {
+    public boolean isTowingPinCheckbox() {
         return towingPinCheckbox;
     }
 
-    public void setTowingPinCheckbox(int towingPinCheckbox) {
+    public void setTowingPinCheckbox(boolean towingPinCheckbox) {
         this.towingPinCheckbox = towingPinCheckbox;
     }
 
@@ -168,11 +168,11 @@ public class Form7Entity {
         this.jumperCablesRemarks = jumperCablesRemarks;
     }
 
-    public int getJumperCablesCheckbox() {
+    public boolean isJumperCablesCheckbox() {
         return jumperCablesCheckbox;
     }
 
-    public void setJumperCablesCheckbox(int jumperCablesCheckbox) {
+    public void setJumperCablesCheckbox(boolean jumperCablesCheckbox) {
         this.jumperCablesCheckbox = jumperCablesCheckbox;
     }
 
@@ -184,11 +184,11 @@ public class Form7Entity {
         this.wheelSpannerRemarks = wheelSpannerRemarks;
     }
 
-    public int getWheelSpannerCheckbox() {
+    public boolean isWheelSpannerCheckbox() {
         return wheelSpannerCheckbox;
     }
 
-    public void setWheelSpannerCheckbox(int wheelSpannerCheckbox) {
+    public void setWheelSpannerCheckbox(boolean wheelSpannerCheckbox) {
         this.wheelSpannerCheckbox = wheelSpannerCheckbox;
     }
 
@@ -200,11 +200,11 @@ public class Form7Entity {
         this.fireExtinguisherRemarks = fireExtinguisherRemarks;
     }
 
-    public int getFireExtinguisherCheckbox() {
+    public boolean isFireExtinguisherCheckbox() {
         return fireExtinguisherCheckbox;
     }
 
-    public void setFireExtinguisherCheckbox(int fireExtinguisherCheckbox) {
+    public void setFireExtinguisherCheckbox(boolean fireExtinguisherCheckbox) {
         this.fireExtinguisherCheckbox = fireExtinguisherCheckbox;
     }
 
@@ -216,11 +216,11 @@ public class Form7Entity {
         this.firstAidKitRemarks = firstAidKitRemarks;
     }
 
-    public int getFirstAidKitCheckbox() {
+    public boolean isFirstAidKitCheckbox() {
         return firstAidKitCheckbox;
     }
 
-    public void setFirstAidKitCheckbox(int firstAidKitCheckbox) {
+    public void setFirstAidKitCheckbox(boolean firstAidKitCheckbox) {
         this.firstAidKitCheckbox = firstAidKitCheckbox;
     }
 
@@ -232,11 +232,11 @@ public class Form7Entity {
         this.towingRopeRemarks = towingRopeRemarks;
     }
 
-    public int getTowingRopeCheckbox() {
+    public boolean isTowingRopeCheckbox() {
         return towingRopeCheckbox;
     }
 
-    public void setTowingRopeCheckbox(int towingRopeCheckbox) {
+    public void setTowingRopeCheckbox(boolean towingRopeCheckbox) {
         this.towingRopeCheckbox = towingRopeCheckbox;
     }
 
@@ -248,11 +248,11 @@ public class Form7Entity {
         this.ownersManualRemarks = ownersManualRemarks;
     }
 
-    public int getOwnersManualCheckbox() {
+    public boolean isOwnersManualCheckbox() {
         return ownersManualCheckbox;
     }
 
-    public void setOwnersManualCheckbox(int ownersManualCheckbox) {
+    public void setOwnersManualCheckbox(boolean ownersManualCheckbox) {
         this.ownersManualCheckbox = ownersManualCheckbox;
     }
 }

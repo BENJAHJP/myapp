@@ -2,12 +2,9 @@ package com.example.servicemaster.activities.checkinforms;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.servicemaster.R;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
 import com.example.servicemaster.roomdatabases.entities.Form3Entity;
@@ -30,8 +27,6 @@ public class Form3Activity extends AppCompatActivity {
             , headLightsLensesCheckbox, tailLightsLensesCheckbox, wipersCheckbox
             , regNoPlateRearCheckbox, rearBumperCheckbox;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,134 +34,117 @@ public class Form3Activity extends AppCompatActivity {
 
         databaseConfig = DatabaseConfig.databaseGetInstance(Form3Activity.this);
 
-        overallAppearance = (EditText) findViewById(R.id.overallAppearanceEditText);
-        overallAppearanceCheckbox = (MaterialCheckBox) findViewById(R.id.overallAppearanceCheckbox);
-        overallAppearanceCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                int checked = 0;
-                if(isChecked){
-                    checked = 1;
-                }
-            }
-        });
+        overallAppearance = findViewById(R.id.overallAppearanceEditText);
+        overallAppearanceCheckbox = findViewById(R.id.overallAppearanceCheckbox);
 
-        sideMirrors = (EditText) findViewById(R.id.sideMirrorsEditText);
-        sideMirrorsCheckbox = (MaterialCheckBox) findViewById(R.id.sideMirrorsCheckbox);
-        sideMirrorsCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                int checked = 0;
-                if(isChecked){
-                    checked = 1;
-                }
-            }
-        });
+        sideMirrors = findViewById(R.id.sideMirrorsEditText);
+        sideMirrorsCheckbox = findViewById(R.id.sideMirrorsCheckbox);
 
-        noOfKeys = (EditText) findViewById(R.id.noOfKeysEditText);
-        noOfKeysCheckbox = (MaterialCheckBox) findViewById(R.id.noOfKeysCheckbox);
+        noOfKeys = findViewById(R.id.noOfKeysEditText);
+        noOfKeysCheckbox = findViewById(R.id.noOfKeysCheckbox);
 
-        fogSpotLights = (EditText) findViewById(R.id.fogSpotLightsEditText);
-        fogSpotLightsCheckbox = (MaterialCheckBox) findViewById(R.id.fogSpotLightsCheckbox);
+        fogSpotLights = findViewById(R.id.fogSpotLightsEditText);
+        fogSpotLightsCheckbox = findViewById(R.id.fogSpotLightsCheckbox);
 
-        antennaAerial = (EditText) findViewById(R.id.antennaAerialEditText);
-        antennaAerialCheckbox = (MaterialCheckBox) findViewById(R.id.antennaAerialCheckbox);
+        antennaAerial = findViewById(R.id.antennaAerialEditText);
+        antennaAerialCheckbox = findViewById(R.id.antennaAerialCheckbox);
 
-        regNoPlateFront = (EditText) findViewById(R.id.regNoPlateFrontEditText);
-        regNoPlateFrontCheckbox = (MaterialCheckBox) findViewById(R.id.regNoPlateFrontCheckbox);
+        regNoPlateFront = findViewById(R.id.regNoPlateFrontEditText);
+        regNoPlateFrontCheckbox = findViewById(R.id.regNoPlateFrontCheckbox);
 
-        frontBumper = (EditText) findViewById(R.id.frontBumperEditText);
-        frontBumperCheckbox = (MaterialCheckBox) findViewById(R.id.frontBumperCheckbox);
+        frontBumper = findViewById(R.id.frontBumperEditText);
+        frontBumperCheckbox = findViewById(R.id.frontBumperCheckbox);
 
-        fuelTankCap = (EditText) findViewById(R.id.fuelTankCapEditText);
-        fuelTankCapCheckbox = (MaterialCheckBox) findViewById(R.id.fuelTankCapCheckbox);
+        fuelTankCap = findViewById(R.id.fuelTankCapEditText);
+        fuelTankCapCheckbox = findViewById(R.id.fuelTankCapCheckbox);
 
-        frontWindScreen = (EditText) findViewById(R.id.frontWindscreenEditText);
-        frontWindScreenCheckbox = (MaterialCheckBox) findViewById(R.id.frontWindscreenCheckbox);
+        frontWindScreen = findViewById(R.id.frontWindscreenEditText);
+        frontWindScreenCheckbox = findViewById(R.id.frontWindscreenCheckbox);
 
-        rearWindScreen = (EditText) findViewById(R.id.rearWindscreenEditText);
-        rearWindScreenCheckbox = (MaterialCheckBox) findViewById(R.id.rearWindscreenCheckbox);
+        rearWindScreen = findViewById(R.id.rearWindscreenEditText);
+        rearWindScreenCheckbox = findViewById(R.id.rearWindscreenCheckbox);
 
-        headLightsLenses = (EditText) findViewById(R.id.headLightsLensesEditText);
-        headLightsLensesCheckbox = (MaterialCheckBox) findViewById(R.id.headLightsLensesCheckbox);
+        headLightsLenses = findViewById(R.id.headLightsLensesEditText);
+        headLightsLensesCheckbox = findViewById(R.id.headLightsLensesCheckbox);
 
-        tailLightsLenses = (EditText) findViewById(R.id.tailLightsLensesEditText);
-        tailLightsLensesCheckbox = (MaterialCheckBox) findViewById(R.id.tailLightsLensesCheckbox);
+        tailLightsLenses = findViewById(R.id.tailLightsLensesEditText);
+        tailLightsLensesCheckbox = findViewById(R.id.tailLightsLensesCheckbox);
 
-        wipers = (EditText) findViewById(R.id.wipersEditText);
-        wipersCheckbox = (MaterialCheckBox) findViewById(R.id.wipersCheckbox);
+        wipers = findViewById(R.id.wipersEditText);
+        wipersCheckbox = findViewById(R.id.wipersCheckbox);
 
-        regNoPlateRear = (EditText) findViewById(R.id.regNoPlateRearEditText);
-        regNoPlateRearCheckbox = (MaterialCheckBox) findViewById(R.id.regNoPlateRearCheckbox);
+        regNoPlateRear = findViewById(R.id.regNoPlateRearEditText);
+        regNoPlateRearCheckbox = findViewById(R.id.regNoPlateRearCheckbox);
 
-        rearBumper = (EditText) findViewById(R.id.rearBumperEditText);
-        rearBumperCheckbox = (MaterialCheckBox) findViewById(R.id.rearBumperCheckbox);
+        rearBumper = findViewById(R.id.rearBumperEditText);
+        rearBumperCheckbox = findViewById(R.id.rearBumperCheckbox);
 
-        floatingActionButton3 = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+        floatingActionButton3 = findViewById(R.id.floatingActionButton3);
 
-        int id = getIntent().getExtras().getInt("id");
+
+        int id = databaseConfig.form3Dao().getLastID();
 
         if(databaseConfig.form3Dao().getData(id)){
             Form3Entity form3Entity = databaseConfig.form3Dao().getRow(id);
             overallAppearance.setText(form3Entity.getOverallAppearanceRemarks());
-            overallAppearanceCheckbox.isChecked();
+            overallAppearanceCheckbox.setChecked(form3Entity.isOverallAppearanceCheckbox());
             sideMirrors.setText(form3Entity.getSideMirrorsRemarks());
-            sideMirrorsCheckbox.isChecked();
+            sideMirrorsCheckbox.setChecked(form3Entity.isSideMirrorsCheckbox());
             noOfKeys.setText(form3Entity.getNoOfKeysRemarks());
-            noOfKeysCheckbox.isChecked();
+            noOfKeysCheckbox.setChecked(form3Entity.isNoOfKeysCheckbox());
             fogSpotLights.setText(form3Entity.getFogSpotLightsRemarks());
-            fogSpotLightsCheckbox.isChecked();
+            fogSpotLightsCheckbox.setChecked(form3Entity.isFogSpotLightsCheckbox());
             antennaAerial.setText(form3Entity.getAntennaAerialRemarks());
-            antennaAerialCheckbox.isChecked();
+            antennaAerialCheckbox.setChecked(form3Entity.isAntennaAerialCheckbox());
             regNoPlateFront.setText(form3Entity.getRegNoPlateFrontRemarks());
-            regNoPlateFrontCheckbox.isChecked();
+            regNoPlateFrontCheckbox.setChecked(form3Entity.isRegNoPlateFrontCheckbox());
             frontBumper.setText(form3Entity.getFrontBumperRemarks());
-            frontBumperCheckbox.isChecked();
+            frontBumperCheckbox.setChecked(form3Entity.isFrontBumperCheckbox());
             fuelTankCap.setText(form3Entity.getFuelTankCapRemarks());
-            fuelTankCapCheckbox.isChecked();
+            fuelTankCapCheckbox.setChecked(form3Entity.isFuelTankCapCheckbox());
             frontWindScreen.setText(form3Entity.getFrontWindScreenRemarks());
-            frontWindScreenCheckbox.isChecked();
+            frontWindScreenCheckbox.setChecked(form3Entity.isFrontWindScreenCheckbox());
             rearWindScreen.setText(form3Entity.getRearWindScreenRemarks());
-            rearWindScreenCheckbox.isChecked();
+            rearWindScreenCheckbox.setChecked(form3Entity.isRearWindScreenCheckbox());
             headLightsLenses.setText(form3Entity.getHeadLightsLensesRemarks());
-            headLightsLensesCheckbox.isChecked();
+            headLightsLensesCheckbox.setChecked(form3Entity.isHeadLightsCheckbox());
             tailLightsLenses.setText(form3Entity.getTailLightsLensesRemarks());
-            tailLightsLensesCheckbox.isChecked();
+            tailLightsLensesCheckbox.setChecked(form3Entity.isTailLightsCheckbox());
             wipers.setText(form3Entity.getWipersLensesRemarks());
-            wipersCheckbox.isChecked();
+            wipersCheckbox.setChecked(form3Entity.isWiperLensesCheckbox());
             regNoPlateRear.setText(form3Entity.getRegNumberPlateRearRemarks());
-            regNoPlateRearCheckbox.isChecked();
+            regNoPlateRearCheckbox.setChecked(form3Entity.isRegNumberPlateRearCheckbox());
             rearBumper.setText(form3Entity.getRearBumperRearRemarks());
-            rearBumperCheckbox.isChecked();
+            rearBumperCheckbox.setChecked(form3Entity.isRearBumperCheckbox());
         }
 
         floatingActionButton3.setOnClickListener(view -> {
-            databaseConfig.form3Dao().insertData(new Form3Entity(overallAppearance.getText().toString(), Integer.parseInt(String.valueOf(overallAppearanceCheckbox.isChecked())),
-                    sideMirrors.getText().toString(), Integer.parseInt(String.valueOf(sideMirrorsCheckbox.isChecked())),
-                    noOfKeys.getText().toString(),Integer.parseInt(String.valueOf(noOfKeysCheckbox.isChecked())),
-                    fogSpotLights.getText().toString(), Integer.parseInt(String.valueOf(fogSpotLightsCheckbox.isChecked())),
-                    antennaAerial.getText().toString(), Integer.parseInt(String.valueOf(antennaAerialCheckbox.isChecked())),
-                    regNoPlateFront.getText().toString(), Integer.parseInt(String.valueOf(regNoPlateFrontCheckbox.isChecked())),
-                    frontBumper.getText().toString(), Integer.parseInt(String.valueOf(frontBumperCheckbox.isChecked())),
-                    fuelTankCap.getText().toString(), Integer.parseInt(String.valueOf(fuelTankCapCheckbox.isChecked())),
-                    frontWindScreen.getText().toString(), Integer.parseInt(String.valueOf(frontWindScreenCheckbox.isChecked())),
-                    rearWindScreen.getText().toString(), Integer.parseInt(String.valueOf(rearWindScreenCheckbox.isChecked())),
-                    headLightsLenses.getText().toString(), Integer.parseInt(String.valueOf(headLightsLensesCheckbox.isChecked())),
-                    tailLightsLenses.getText().toString(), Integer.parseInt(String.valueOf(tailLightsLensesCheckbox.isChecked())),
-                    wipers.getText().toString(), Integer.parseInt(String.valueOf(wipersCheckbox.isChecked())),
-                    regNoPlateRear.getText().toString(), Integer.parseInt(String.valueOf(regNoPlateRearCheckbox.isChecked())),
-                    rearBumper.getText().toString(), Integer.parseInt(String.valueOf(rearBumperCheckbox.isChecked()))
+            databaseConfig.form3Dao().insertData(new Form3Entity(overallAppearance.getText().toString(), overallAppearanceCheckbox.isChecked(),
+                    sideMirrors.getText().toString(), sideMirrorsCheckbox.isChecked(),
+                    noOfKeys.getText().toString(), noOfKeysCheckbox.isChecked(),
+                    fogSpotLights.getText().toString(), fogSpotLightsCheckbox.isChecked(),
+                    antennaAerial.getText().toString(), antennaAerialCheckbox.isChecked(),
+                    regNoPlateFront.getText().toString(), regNoPlateFrontCheckbox.isChecked(),
+                    frontBumper.getText().toString(), frontBumperCheckbox.isChecked(),
+                    fuelTankCap.getText().toString(), fuelTankCapCheckbox.isChecked(),
+                    frontWindScreen.getText().toString(), frontWindScreenCheckbox.isChecked(),
+                    rearWindScreen.getText().toString(), rearWindScreenCheckbox.isChecked(),
+                    headLightsLenses.getText().toString(), headLightsLensesCheckbox.isChecked(),
+                    tailLightsLenses.getText().toString(), tailLightsLensesCheckbox.isChecked(),
+                    wipers.getText().toString(), wipersCheckbox.isChecked(),
+                    regNoPlateRear.getText().toString(), regNoPlateRearCheckbox.isChecked(),
+                    rearBumper.getText().toString(), rearBumperCheckbox.isChecked()
                     ));
             Intent i = new Intent(Form3Activity.this, Form4Activity.class);
+            i.putExtra("id", databaseConfig.form3Dao().getLastID());
             startActivity(i);
             finish();
         });
 
-        imageView = (ImageView) findViewById(R.id.backButtonForm3);
+        imageView = findViewById(R.id.backButtonForm3);
 
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(Form3Activity.this, Form2Activity.class);
-            i.putExtra("id", id);
             startActivity(i);
             finish();
         });

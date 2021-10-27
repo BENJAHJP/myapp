@@ -11,18 +11,18 @@ public class Form5Entity {
     private int id;
 
     private String wheelRimsRemarks;
-    private int wheelRimsCheckbox;
+    private boolean wheelRimsCheckbox;
 
     private String wheelCapsHubsRemarks;
-    private int wheelCapsHubsCheckbox;
+    private boolean wheelCapsHubsCheckbox;
 
     private String mudFlapRemarks;
-    private int mudFlapCheckbox;
+    private boolean mudFlapCheckbox;
 
     private String steeringWheelRemarks;
-    private int steeringWheelCheckbox;
+    private boolean steeringWheelCheckbox;
 
-    public Form5Entity(int id, String wheelRimsRemarks, int wheelRimsCheckbox, String wheelCapsHubsRemarks, int wheelCapsHubsCheckbox, String mudFlapRemarks, int mudFlapCheckbox, String steeringWheelRemarks, int steeringWheelCheckbox) {
+    public Form5Entity(int id, String wheelRimsRemarks, boolean wheelRimsCheckbox, String wheelCapsHubsRemarks, boolean wheelCapsHubsCheckbox, String mudFlapRemarks, boolean mudFlapCheckbox, String steeringWheelRemarks, boolean steeringWheelCheckbox) {
         this.id = id;
         this.wheelRimsRemarks = wheelRimsRemarks;
         this.wheelRimsCheckbox = wheelRimsCheckbox;
@@ -35,7 +35,7 @@ public class Form5Entity {
     }
 
     @Ignore
-    public Form5Entity(String wheelRimsRemarks, int wheelRimsCheckbox, String wheelCapsHubsRemarks, int wheelCapsHubsCheckbox, String mudFlapRemarks, int mudFlapCheckbox, String steeringWheelRemarks, int steeringWheelCheckbox) {
+    public Form5Entity(String wheelRimsRemarks, boolean wheelRimsCheckbox, String wheelCapsHubsRemarks, boolean wheelCapsHubsCheckbox, String mudFlapRemarks, boolean mudFlapCheckbox, String steeringWheelRemarks, boolean steeringWheelCheckbox) {
         this.wheelRimsRemarks = wheelRimsRemarks;
         this.wheelRimsCheckbox = wheelRimsCheckbox;
         this.wheelCapsHubsRemarks = wheelCapsHubsRemarks;
@@ -62,11 +62,11 @@ public class Form5Entity {
         this.wheelRimsRemarks = wheelRimsRemarks;
     }
 
-    public int getWheelRimsCheckbox() {
+    public boolean isWheelRimsCheckbox() {
         return wheelRimsCheckbox;
     }
 
-    public void setWheelRimsCheckbox(int wheelRimsCheckbox) {
+    public void setWheelRimsCheckbox(boolean wheelRimsCheckbox) {
         this.wheelRimsCheckbox = wheelRimsCheckbox;
     }
 
@@ -78,11 +78,11 @@ public class Form5Entity {
         this.wheelCapsHubsRemarks = wheelCapsHubsRemarks;
     }
 
-    public int getWheelCapsHubsCheckbox() {
+    public boolean isWheelCapsHubsCheckbox() {
         return wheelCapsHubsCheckbox;
     }
 
-    public void setWheelCapsHubsCheckbox(int wheelCapsHubsCheckbox) {
+    public void setWheelCapsHubsCheckbox(boolean wheelCapsHubsCheckbox) {
         this.wheelCapsHubsCheckbox = wheelCapsHubsCheckbox;
     }
 
@@ -94,11 +94,11 @@ public class Form5Entity {
         this.mudFlapRemarks = mudFlapRemarks;
     }
 
-    public int getMudFlapCheckbox() {
+    public boolean isMudFlapCheckbox() {
         return mudFlapCheckbox;
     }
 
-    public void setMudFlapCheckbox(int mudFlapCheckbox) {
+    public void setMudFlapCheckbox(boolean mudFlapCheckbox) {
         this.mudFlapCheckbox = mudFlapCheckbox;
     }
 
@@ -110,11 +110,11 @@ public class Form5Entity {
         this.steeringWheelRemarks = steeringWheelRemarks;
     }
 
-    public int getSteeringWheelCheckbox() {
+    public boolean isSteeringWheelCheckbox() {
         return steeringWheelCheckbox;
     }
 
-    public void setSteeringWheelCheckbox(int steeringWheelCheckbox) {
+    public void setSteeringWheelCheckbox(boolean steeringWheelCheckbox) {
         this.steeringWheelCheckbox = steeringWheelCheckbox;
     }
 }

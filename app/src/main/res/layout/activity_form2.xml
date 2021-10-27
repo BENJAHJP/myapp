@@ -91,17 +91,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 android:importantForAutofill="no" />
-            <Spinner
-                android:id="@+id/serviceAdvisorSpinner"
+            <EditText
+                android:id="@+id/serviceAdvisorTextInput"
                 android:layout_width="320dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/text_input"
+                android:hint="@string/serviceAdvisor"
+                android:inputType="text"
+                android:padding="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:importantForAutofill="no"
                 />
+
     </LinearLayout>
     </ScrollView>
 

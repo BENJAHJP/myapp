@@ -11,51 +11,51 @@ public class Form3Entity {
     private int id;
 
     private String overallAppearanceRemarks;
-    private int overallAppearanceCheckbox;
+    private boolean overallAppearanceCheckbox;
 
     private String sideMirrorsRemarks;
-    private int sideMirrorsCheckbox;
+    private boolean sideMirrorsCheckbox;
 
     private String noOfKeysRemarks;
-    private int noOfKeysCheckbox;
+    private boolean noOfKeysCheckbox;
 
     private String fogSpotLightsRemarks;
-    private int fogSpotLightsCheckbox;
+    private boolean fogSpotLightsCheckbox;
 
     private String antennaAerialRemarks;
-    private int antennaAerialCheckbox;
+    private boolean antennaAerialCheckbox;
 
     private String regNoPlateFrontRemarks;
-    private int regNoPlateFrontCheckbox;
+    private boolean regNoPlateFrontCheckbox;
 
     private String frontBumperRemarks;
-    private int frontBumperCheckbox;
+    private boolean frontBumperCheckbox;
 
     private String fuelTankCapRemarks;
-    private int fuelTankCapCheckbox;
+    private boolean fuelTankCapCheckbox;
 
     private String frontWindScreenRemarks;
-    private int frontWindScreenCheckbox;
+    private boolean frontWindScreenCheckbox;
 
     private String rearWindScreenRemarks;
-    private int rearWindScreenCheckbox;
+    private boolean rearWindScreenCheckbox;
 
     private String headLightsLensesRemarks;
-    private int headLightsCheckbox;
+    private boolean headLightsCheckbox;
 
     private String tailLightsLensesRemarks;
-    private int tailLightsCheckbox;
+    private boolean tailLightsCheckbox;
 
     private String wipersLensesRemarks;
-    private int wiperLensesCheckbox;
+    private boolean wiperLensesCheckbox;
 
     private String regNumberPlateRearRemarks;
-    private int regNumberPlateRearCheckbox;
+    private boolean regNumberPlateRearCheckbox;
 
     private String rearBumperRearRemarks;
-    private int rearBumperCheckbox;
+    private boolean rearBumperCheckbox;
 
-    public Form3Entity(int id, String overallAppearanceRemarks, int overallAppearanceCheckbox, String sideMirrorsRemarks, int sideMirrorsCheckbox, String noOfKeysRemarks, int noOfKeysCheckbox, String fogSpotLightsRemarks, int fogSpotLightsCheckbox, String antennaAerialRemarks, int antennaAerialCheckbox, String regNoPlateFrontRemarks, int regNoPlateFrontCheckbox, String frontBumperRemarks, int frontBumperCheckbox, String fuelTankCapRemarks, int fuelTankCapCheckbox, String frontWindScreenRemarks, int frontWindScreenCheckbox, String rearWindScreenRemarks, int rearWindScreenCheckbox, String headLightsLensesRemarks, int headLightsCheckbox, String tailLightsLensesRemarks, int tailLightsCheckbox, String wipersLensesRemarks, int wiperLensesCheckbox, String regNumberPlateRearRemarks, int regNumberPlateRearCheckbox, String rearBumperRearRemarks, int rearBumperCheckbox) {
+    public Form3Entity(int id, String overallAppearanceRemarks, boolean overallAppearanceCheckbox, String sideMirrorsRemarks, boolean sideMirrorsCheckbox, String noOfKeysRemarks, boolean noOfKeysCheckbox, String fogSpotLightsRemarks, boolean fogSpotLightsCheckbox, String antennaAerialRemarks, boolean antennaAerialCheckbox, String regNoPlateFrontRemarks, boolean regNoPlateFrontCheckbox, String frontBumperRemarks, boolean frontBumperCheckbox, String fuelTankCapRemarks, boolean fuelTankCapCheckbox, String frontWindScreenRemarks, boolean frontWindScreenCheckbox, String rearWindScreenRemarks, boolean rearWindScreenCheckbox, String headLightsLensesRemarks, boolean headLightsCheckbox, String tailLightsLensesRemarks, boolean tailLightsCheckbox, String wipersLensesRemarks, boolean wiperLensesCheckbox, String regNumberPlateRearRemarks, boolean regNumberPlateRearCheckbox, String rearBumperRearRemarks, boolean rearBumperCheckbox) {
         this.id = id;
         this.overallAppearanceRemarks = overallAppearanceRemarks;
         this.overallAppearanceCheckbox = overallAppearanceCheckbox;
@@ -89,9 +89,9 @@ public class Form3Entity {
         this.rearBumperCheckbox = rearBumperCheckbox;
     }
 
-
     @Ignore
-    public Form3Entity(String overallAppearanceRemarks, int overallAppearanceCheckbox, String sideMirrorsRemarks, int sideMirrorsCheckbox, String noOfKeysRemarks, int noOfKeysCheckbox, String fogSpotLightsRemarks, int fogSpotLightsCheckbox, String antennaAerialRemarks, int antennaAerialCheckbox, String regNoPlateFrontRemarks, int regNoPlateFrontCheckbox, String frontBumperRemarks, int frontBumperCheckbox, String fuelTankCapRemarks, int fuelTankCapCheckbox, String frontWindScreenRemarks, int frontWindScreenCheckbox, String rearWindScreenRemarks, int rearWindScreenCheckbox, String headLightsLensesRemarks, int headLightsCheckbox, String tailLightsLensesRemarks, int tailLightsCheckbox, String wipersLensesRemarks, int wiperLensesCheckbox, String regNumberPlateRearRemarks, int regNumberPlateRearCheckbox, String rearBumperRearRemarks, int rearBumperCheckbox) {
+
+    public Form3Entity(String overallAppearanceRemarks, boolean overallAppearanceCheckbox, String sideMirrorsRemarks, boolean sideMirrorsCheckbox, String noOfKeysRemarks, boolean noOfKeysCheckbox, String fogSpotLightsRemarks, boolean fogSpotLightsCheckbox, String antennaAerialRemarks, boolean antennaAerialCheckbox, String regNoPlateFrontRemarks, boolean regNoPlateFrontCheckbox, String frontBumperRemarks, boolean frontBumperCheckbox, String fuelTankCapRemarks, boolean fuelTankCapCheckbox, String frontWindScreenRemarks, boolean frontWindScreenCheckbox, String rearWindScreenRemarks, boolean rearWindScreenCheckbox, String headLightsLensesRemarks, boolean headLightsCheckbox, String tailLightsLensesRemarks, boolean tailLightsCheckbox, String wipersLensesRemarks, boolean wiperLensesCheckbox, String regNumberPlateRearRemarks, boolean regNumberPlateRearCheckbox, String rearBumperRearRemarks, boolean rearBumperCheckbox) {
         this.overallAppearanceRemarks = overallAppearanceRemarks;
         this.overallAppearanceCheckbox = overallAppearanceCheckbox;
         this.sideMirrorsRemarks = sideMirrorsRemarks;
@@ -140,11 +140,11 @@ public class Form3Entity {
         this.overallAppearanceRemarks = overallAppearanceRemarks;
     }
 
-    public int getOverallAppearanceCheckbox() {
+    public boolean isOverallAppearanceCheckbox() {
         return overallAppearanceCheckbox;
     }
 
-    public void setOverallAppearanceCheckbox(int overallAppearanceCheckbox) {
+    public void setOverallAppearanceCheckbox(boolean overallAppearanceCheckbox) {
         this.overallAppearanceCheckbox = overallAppearanceCheckbox;
     }
 
@@ -156,11 +156,11 @@ public class Form3Entity {
         this.sideMirrorsRemarks = sideMirrorsRemarks;
     }
 
-    public int getSideMirrorsCheckbox() {
+    public boolean isSideMirrorsCheckbox() {
         return sideMirrorsCheckbox;
     }
 
-    public void setSideMirrorsCheckbox(int sideMirrorsCheckbox) {
+    public void setSideMirrorsCheckbox(boolean sideMirrorsCheckbox) {
         this.sideMirrorsCheckbox = sideMirrorsCheckbox;
     }
 
@@ -172,11 +172,11 @@ public class Form3Entity {
         this.noOfKeysRemarks = noOfKeysRemarks;
     }
 
-    public int getNoOfKeysCheckbox() {
+    public boolean isNoOfKeysCheckbox() {
         return noOfKeysCheckbox;
     }
 
-    public void setNoOfKeysCheckbox(int noOfKeysCheckbox) {
+    public void setNoOfKeysCheckbox(boolean noOfKeysCheckbox) {
         this.noOfKeysCheckbox = noOfKeysCheckbox;
     }
 
@@ -188,11 +188,11 @@ public class Form3Entity {
         this.fogSpotLightsRemarks = fogSpotLightsRemarks;
     }
 
-    public int getFogSpotLightsCheckbox() {
+    public boolean isFogSpotLightsCheckbox() {
         return fogSpotLightsCheckbox;
     }
 
-    public void setFogSpotLightsCheckbox(int fogSpotLightsCheckbox) {
+    public void setFogSpotLightsCheckbox(boolean fogSpotLightsCheckbox) {
         this.fogSpotLightsCheckbox = fogSpotLightsCheckbox;
     }
 
@@ -204,11 +204,11 @@ public class Form3Entity {
         this.antennaAerialRemarks = antennaAerialRemarks;
     }
 
-    public int getAntennaAerialCheckbox() {
+    public boolean isAntennaAerialCheckbox() {
         return antennaAerialCheckbox;
     }
 
-    public void setAntennaAerialCheckbox(int antennaAerialCheckbox) {
+    public void setAntennaAerialCheckbox(boolean antennaAerialCheckbox) {
         this.antennaAerialCheckbox = antennaAerialCheckbox;
     }
 
@@ -220,11 +220,11 @@ public class Form3Entity {
         this.regNoPlateFrontRemarks = regNoPlateFrontRemarks;
     }
 
-    public int getRegNoPlateFrontCheckbox() {
+    public boolean isRegNoPlateFrontCheckbox() {
         return regNoPlateFrontCheckbox;
     }
 
-    public void setRegNoPlateFrontCheckbox(int regNoPlateFrontCheckbox) {
+    public void setRegNoPlateFrontCheckbox(boolean regNoPlateFrontCheckbox) {
         this.regNoPlateFrontCheckbox = regNoPlateFrontCheckbox;
     }
 
@@ -236,11 +236,11 @@ public class Form3Entity {
         this.frontBumperRemarks = frontBumperRemarks;
     }
 
-    public int getFrontBumperCheckbox() {
+    public boolean isFrontBumperCheckbox() {
         return frontBumperCheckbox;
     }
 
-    public void setFrontBumperCheckbox(int frontBumperCheckbox) {
+    public void setFrontBumperCheckbox(boolean frontBumperCheckbox) {
         this.frontBumperCheckbox = frontBumperCheckbox;
     }
 
@@ -252,11 +252,11 @@ public class Form3Entity {
         this.fuelTankCapRemarks = fuelTankCapRemarks;
     }
 
-    public int getFuelTankCapCheckbox() {
+    public boolean isFuelTankCapCheckbox() {
         return fuelTankCapCheckbox;
     }
 
-    public void setFuelTankCapCheckbox(int fuelTankCapCheckbox) {
+    public void setFuelTankCapCheckbox(boolean fuelTankCapCheckbox) {
         this.fuelTankCapCheckbox = fuelTankCapCheckbox;
     }
 
@@ -268,11 +268,11 @@ public class Form3Entity {
         this.frontWindScreenRemarks = frontWindScreenRemarks;
     }
 
-    public int getFrontWindScreenCheckbox() {
+    public boolean isFrontWindScreenCheckbox() {
         return frontWindScreenCheckbox;
     }
 
-    public void setFrontWindScreenCheckbox(int frontWindScreenCheckbox) {
+    public void setFrontWindScreenCheckbox(boolean frontWindScreenCheckbox) {
         this.frontWindScreenCheckbox = frontWindScreenCheckbox;
     }
 
@@ -284,11 +284,11 @@ public class Form3Entity {
         this.rearWindScreenRemarks = rearWindScreenRemarks;
     }
 
-    public int getRearWindScreenCheckbox() {
+    public boolean isRearWindScreenCheckbox() {
         return rearWindScreenCheckbox;
     }
 
-    public void setRearWindScreenCheckbox(int rearWindScreenCheckbox) {
+    public void setRearWindScreenCheckbox(boolean rearWindScreenCheckbox) {
         this.rearWindScreenCheckbox = rearWindScreenCheckbox;
     }
 
@@ -300,11 +300,11 @@ public class Form3Entity {
         this.headLightsLensesRemarks = headLightsLensesRemarks;
     }
 
-    public int getHeadLightsCheckbox() {
+    public boolean isHeadLightsCheckbox() {
         return headLightsCheckbox;
     }
 
-    public void setHeadLightsCheckbox(int headLightsCheckbox) {
+    public void setHeadLightsCheckbox(boolean headLightsCheckbox) {
         this.headLightsCheckbox = headLightsCheckbox;
     }
 
@@ -316,11 +316,11 @@ public class Form3Entity {
         this.tailLightsLensesRemarks = tailLightsLensesRemarks;
     }
 
-    public int getTailLightsCheckbox() {
+    public boolean isTailLightsCheckbox() {
         return tailLightsCheckbox;
     }
 
-    public void setTailLightsCheckbox(int tailLightsCheckbox) {
+    public void setTailLightsCheckbox(boolean tailLightsCheckbox) {
         this.tailLightsCheckbox = tailLightsCheckbox;
     }
 
@@ -332,11 +332,11 @@ public class Form3Entity {
         this.wipersLensesRemarks = wipersLensesRemarks;
     }
 
-    public int getWiperLensesCheckbox() {
+    public boolean isWiperLensesCheckbox() {
         return wiperLensesCheckbox;
     }
 
-    public void setWiperLensesCheckbox(int wiperLensesCheckbox) {
+    public void setWiperLensesCheckbox(boolean wiperLensesCheckbox) {
         this.wiperLensesCheckbox = wiperLensesCheckbox;
     }
 
@@ -348,11 +348,11 @@ public class Form3Entity {
         this.regNumberPlateRearRemarks = regNumberPlateRearRemarks;
     }
 
-    public int getRegNumberPlateRearCheckbox() {
+    public boolean isRegNumberPlateRearCheckbox() {
         return regNumberPlateRearCheckbox;
     }
 
-    public void setRegNumberPlateRearCheckbox(int regNumberPlateRearCheckbox) {
+    public void setRegNumberPlateRearCheckbox(boolean regNumberPlateRearCheckbox) {
         this.regNumberPlateRearCheckbox = regNumberPlateRearCheckbox;
     }
 
@@ -364,11 +364,11 @@ public class Form3Entity {
         this.rearBumperRearRemarks = rearBumperRearRemarks;
     }
 
-    public int getRearBumperCheckbox() {
+    public boolean isRearBumperCheckbox() {
         return rearBumperCheckbox;
     }
 
-    public void setRearBumperCheckbox(int rearBumperCheckbox) {
+    public void setRearBumperCheckbox(boolean rearBumperCheckbox) {
         this.rearBumperCheckbox = rearBumperCheckbox;
     }
 }

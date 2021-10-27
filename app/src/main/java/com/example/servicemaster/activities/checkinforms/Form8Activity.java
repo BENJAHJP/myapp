@@ -21,9 +21,10 @@ public class Form8Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form8);
 
+
         databaseConfig = DatabaseConfig.databaseGetInstance(Form8Activity.this);
 
-        ImageView imageView = (ImageView) findViewById(R.id.backButtonForm8);
+        ImageView imageView = findViewById(R.id.backButtonForm8);
 
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(Form8Activity.this, Form7Activity.class);
@@ -31,7 +32,7 @@ public class Form8Activity extends AppCompatActivity {
             finish();
         });
 
-        MaterialButton submitButton = (MaterialButton) findViewById(R.id.submitButton);
+        MaterialButton submitButton = findViewById(R.id.submitButton);
 
         submitButton.setOnClickListener(view -> {
             MaterialAlertDialogBuilder materialAlertDialogBuilder = new MaterialAlertDialogBuilder(Form8Activity.this);

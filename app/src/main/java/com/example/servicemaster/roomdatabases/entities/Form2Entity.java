@@ -3,7 +3,7 @@ package com.example.servicemaster.roomdatabases.entities;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
-import androidx.room.RoomDatabase;
+
 
 @Entity(tableName = "Form2")
 public class Form2Entity {

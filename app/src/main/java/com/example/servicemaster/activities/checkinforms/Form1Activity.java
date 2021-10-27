@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicemaster.R;
 import com.example.servicemaster.activities.DashboardActivity;
-import com.example.servicemaster.databinding.ActivityMainBinding;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
 import com.example.servicemaster.roomdatabases.entities.Form1Entity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -51,28 +50,28 @@ public class Form1Activity extends AppCompatActivity {
 
         final Calendar myCalendar = Calendar.getInstance();
 
-        regNoTextInput = (EditText) findViewById(R.id.regNoTextInput);
+        regNoTextInput = findViewById(R.id.regNoTextInput);
 
-        financierSpinnerInput = (Spinner) findViewById(R.id.financierSpinner);
+        financierSpinnerInput = findViewById(R.id.financierSpinner);
         ArrayList<String> financierArrayList = new ArrayList<>(Arrays.asList(financierValues));
         ArrayAdapter<String> financierArrayAdapter = new ArrayAdapter<>(
                 Form1Activity.this, R.layout.support_simple_spinner_dropdown_item,
                 financierArrayList);
         financierSpinnerInput.setAdapter(financierArrayAdapter);
 
-        customerTextInput = (EditText) findViewById(R.id.customerTextInput);
+        customerTextInput = findViewById(R.id.customerTextInput);
 
-        motoristTextInput = (EditText) findViewById(R.id.motoristTextInput);
+        motoristTextInput = findViewById(R.id.motoristTextInput);
 
-        emailTextInput = (EditText) findViewById(R.id.emailTextInput);
+        emailTextInput = findViewById(R.id.emailTextInput);
 
-        telNoTextInput = (EditText) findViewById(R.id.telNoTextInput);
+        telNoTextInput = findViewById(R.id.telNoTextInput);
 
-        idNoTextInput = (EditText) findViewById(R.id.idNoTextInput);
+        idNoTextInput = findViewById(R.id.idNoTextInput);
 
-        dateTextInput = (EditText) findViewById(R.id.dateInTextInput);
+        dateTextInput = findViewById(R.id.dateInTextInput);
 
-        jobTypeSpinnerInput = (Spinner) findViewById(R.id.jobTypeSpinner);
+        jobTypeSpinnerInput = findViewById(R.id.jobTypeSpinner);
 
         ArrayList<String> jobTypeArrayList = new ArrayList<>(Arrays.asList(jobTypeValues));
         ArrayAdapter<String> jobTypeArrayAdapter = new ArrayAdapter<>(
@@ -80,28 +79,28 @@ public class Form1Activity extends AppCompatActivity {
                 jobTypeArrayList);
         jobTypeSpinnerInput.setAdapter(jobTypeArrayAdapter);
 
-        durationTextInput = (EditText) findViewById(R.id.durationTextInput);
+        durationTextInput = findViewById(R.id.durationTextInput);
 
-        promisedDateTextInput = (EditText) findViewById(R.id.promisedDateTextInput);
+        promisedDateTextInput = findViewById(R.id.promisedDateTextInput);
 
-        postalAddressTextInput = (EditText) findViewById(R.id.postalAddressTextInput);
+        postalAddressTextInput = findViewById(R.id.postalAddressTextInput);
 
-        makeSpinnerInput = (Spinner) findViewById(R.id.makeSpinner);
+        makeSpinnerInput = findViewById(R.id.makeSpinner);
         ArrayList<String> makeArrayList = new ArrayList<>(Arrays.asList(makeValues));
         ArrayAdapter<String> makeArrayAdapter = new ArrayAdapter<>(
                 Form1Activity.this,R.layout.support_simple_spinner_dropdown_item,
                 makeArrayList);
         makeSpinnerInput.setAdapter(makeArrayAdapter);
 
-        modelTextInput = (EditText) findViewById(R.id.modelTextInput);
+        modelTextInput = findViewById(R.id.modelTextInput);
 
-        chassisNoTextInput = (EditText) findViewById(R.id.chassisNoTextInput);
+        chassisNoTextInput = findViewById(R.id.chassisNoTextInput);
 
-        engineNoTextInput = (EditText) findViewById(R.id.engineNoTextInput);
+        engineNoTextInput = findViewById(R.id.engineNoTextInput);
 
-        vinNoTextInput = (EditText) findViewById(R.id.vinNoTextInput);
+        vinNoTextInput = findViewById(R.id.vinNoTextInput);
 
-        fuelSpinnerInput = (Spinner) findViewById(R.id.fuelSpinner);
+        fuelSpinnerInput = findViewById(R.id.fuelSpinner);
 
         ArrayList<String> fuelArrayList = new ArrayList<>(Arrays.asList(fuelValue));
         ArrayAdapter<String> fuelArrayAdapter = new ArrayAdapter<>(
@@ -109,13 +108,14 @@ public class Form1Activity extends AppCompatActivity {
                 fuelArrayList);
         fuelSpinnerInput.setAdapter(fuelArrayAdapter);
 
-        odometerTextInput = (EditText) findViewById(R.id.odometerTextInput);
+        odometerTextInput = findViewById(R.id.odometerTextInput);
 
-        manualJobCardNoTextInput = (EditText) findViewById(R.id.manualJobCardNoTextInput);
+        manualJobCardNoTextInput = findViewById(R.id.manualJobCardNoTextInput);
 
-        towedByTextInput = (EditText) findViewById(R.id.towedByTextInput);
+        towedByTextInput = findViewById(R.id.towedByTextInput);
 
-        int id = getIntent().getExtras().getInt("id");
+
+        int id = databaseConfig.form1Dao().getLastID();
 
         if(databaseConfig.form1Dao().getData(id)){
             Form1Entity form1Entity = databaseConfig.form1Dao().getRow(id);
@@ -140,8 +140,8 @@ public class Form1Activity extends AppCompatActivity {
             customerTextInput.setText(form1Entity.getCustomer());
             motoristTextInput.setText(form1Entity.getMotorist());
             emailTextInput.setText(form1Entity.getEmail());
-            telNoTextInput.setText(Integer.toString(form1Entity.getTelNo()));
-            idNoTextInput.setText(Integer.toString(form1Entity.getIdNo()));
+            telNoTextInput.setText(form1Entity.getTelNo());
+            idNoTextInput.setText(form1Entity.getIdNo());
             dateTextInput.setText(form1Entity.getDateIn());
 
             String[] jobTypeNewList = new String[jobTypeValues.length];
@@ -209,10 +209,8 @@ public class Form1Activity extends AppCompatActivity {
 
         }
 
-        floatingActionButton1 = (FloatingActionButton) findViewById(R.id.floatingActionButton1);
-        imageView = (ImageView) findViewById(R.id.backButtonForm8);
-
-
+        floatingActionButton1 = findViewById(R.id.floatingActionButton1);
+        imageView = findViewById(R.id.backButtonForm8);
 
         imageView.setOnClickListener(view -> {
                 Intent i = new Intent(Form1Activity.this, DashboardActivity.class);
@@ -221,25 +219,10 @@ public class Form1Activity extends AppCompatActivity {
         });
 
         floatingActionButton1.setOnClickListener(view -> {
-            int telNo;
-            if(telNoTextInput.getText().toString().equals("")){
-                telNo = 0;
-            }else {
-                telNo = Integer.parseInt(telNoTextInput.getText().toString());
-            }
-
-            int idNo;
-
-            if(idNoTextInput.getText().toString().equals("")){
-                idNo = 0;
-            }else {
-                idNo = Integer.parseInt(idNoTextInput.getText().toString());
-            }
-
             databaseConfig.form1Dao().insertData(new Form1Entity(regNoTextInput.getText().toString(),
                     financierSpinnerInput.getSelectedItem().toString(), customerTextInput.getText().toString(),
                     motoristTextInput.getText().toString(),
-                    emailTextInput.getText().toString(), telNo,idNo,
+                    emailTextInput.getText().toString(), telNoTextInput.getText().toString(),idNoTextInput.getText().toString(),
                     dateTextInput.getText().toString(), jobTypeSpinnerInput.getSelectedItem().toString(),
                     durationTextInput.getText().toString(), promisedDateTextInput.getText().toString(),
                     postalAddressTextInput.getText().toString(), makeSpinnerInput.getSelectedItem().toString(),
@@ -250,7 +233,6 @@ public class Form1Activity extends AppCompatActivity {
             ));
 
             Intent i = new Intent(Form1Activity.this, Form2Activity.class);
-            i.putExtra("id",databaseConfig.form1Dao().getLastID());
             startActivity(i);
             finish();
         });

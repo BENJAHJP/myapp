@@ -58,8 +58,7 @@ public class Form6Entity {
     }
 
     @Ignore
-
-    public Form6Entity(String rhsfMake, String rhsfSerialNo, String rhsfCondition, String rhsrMake, String rhsrSerialNo, String rhsrCondition, String lhsfMake, String lhsfSerialNo, String lhsfCondition, String lhsrMake, String lhsrSerialNo, String lhsrCondition, String swheelMake, String swheelSerialNo, String swheelCondition, String batteryMake, String batterySerialNo, String batteryCondition) {
+    public Form6Entity(String s, String rhsfMake, String rhsfSerialNo, String rhsfCondition, String rhsrMake, String rhsrSerialNo, String rhsrCondition, String lhsfMake, String lhsfSerialNo, String lhsfCondition, String lhsrMake, String lhsrSerialNo, String lhsrCondition, String swheelMake, String swheelSerialNo, String swheelCondition, String batteryMake, String batterySerialNo, String batteryCondition) {
         this.rhsfMake = rhsfMake;
         this.rhsfSerialNo = rhsfSerialNo;
         this.rhsfCondition = rhsfCondition;

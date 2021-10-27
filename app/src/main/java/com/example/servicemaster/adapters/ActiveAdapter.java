@@ -5,13 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.servicemaster.R;
 import com.example.servicemaster.models.ActiveDataModel;
-
 import java.util.List;
 
 public class ActiveAdapter extends RecyclerView.Adapter<ActiveAdapter.MyViewHolder3>{
@@ -53,7 +50,7 @@ public class ActiveAdapter extends RecyclerView.Adapter<ActiveAdapter.MyViewHold
         }
     }
 
-    public class MyViewHolder3 extends RecyclerView.ViewHolder{
+    public static class MyViewHolder3 extends RecyclerView.ViewHolder{
         TextView customer, regNo,duration, jobType;
 
         public MyViewHolder3(@NonNull View itemView) {
@@ -65,7 +62,7 @@ public class ActiveAdapter extends RecyclerView.Adapter<ActiveAdapter.MyViewHold
         }
     }
 
-    private class MyOnClickListener implements View.OnClickListener {
+    private static class MyOnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
 

@@ -11,42 +11,42 @@ public class Form4Entity {
     private int id;
 
     private String rearViewMirrorRemarks;
-    private int rearViewMirrorCheckbox;
+    private boolean rearViewMirrorCheckbox;
 
     private String windowSwitchesRemarks;
-    private int windowSwitchesCheckbox;
+    private boolean windowSwitchesCheckbox;
 
     private String floorMatsCarpetRemarks;
-    private int floorMatsCarpetCheckbox;
+    private boolean floorMatsCarpetCheckbox;
 
     private String dashboardRemarks;
-    private int dashboardCheckbox;
+    private boolean dashboardCheckbox;
 
     private String engineSensorsAndFusesRemarks;
-    private int engineSensorsAndFusesCheckbox;
+    private boolean engineSensorsAndFusesCheckbox;
 
     private String washerBottlesRemarks;
-    private int washerBottlesCheckbox;
+    private boolean washerBottlesCheckbox;
 
     private String cigarLighterRemarks;
-    private int cigarLighterCheckbox;
+    private boolean cigarLighterCheckbox;
 
     private String speakerRemarks;
-    private int speakerCheckbox;
+    private boolean speakerCheckbox;
 
     private String radioCassetteCdRemarks;
-    private int radioCassetteCdCheckbox;
+    private boolean radioCassetteCdCheckbox;
 
     private String engineCompartmentRemarks;
-    private int engineCompartmentCheckbox;
+    private boolean engineCompartmentCheckbox;
 
     private String computerBoxRemarks;
-    private int computerBoxCheckbox;
+    private boolean computerBoxCheckbox;
 
     private String hornRemarks;
-    private int hornCheckbox;
+    private boolean hornCheckbox;
 
-    public Form4Entity(int id, String rearViewMirrorRemarks, int rearViewMirrorCheckbox, String windowSwitchesRemarks, int windowSwitchesCheckbox, String floorMatsCarpetRemarks, int floorMatsCarpetCheckbox, String dashboardRemarks, int dashboardCheckbox, String engineSensorsAndFusesRemarks, int engineSensorsAndFusesCheckbox, String washerBottlesRemarks, int washerBottlesCheckbox, String cigarLighterRemarks, int cigarLighterCheckbox, String speakerRemarks, int speakerCheckbox, String radioCassetteCdRemarks, int radioCassetteCdCheckbox, String engineCompartmentRemarks, int engineCompartmentCheckbox, String computerBoxRemarks, int computerBoxCheckbox, String hornRemarks, int hornCheckbox) {
+    public Form4Entity(int id, String rearViewMirrorRemarks, boolean rearViewMirrorCheckbox, String windowSwitchesRemarks, boolean windowSwitchesCheckbox, String floorMatsCarpetRemarks, boolean floorMatsCarpetCheckbox, String dashboardRemarks, boolean dashboardCheckbox, String engineSensorsAndFusesRemarks, boolean engineSensorsAndFusesCheckbox, String washerBottlesRemarks, boolean washerBottlesCheckbox, String cigarLighterRemarks, boolean cigarLighterCheckbox, String speakerRemarks, boolean speakerCheckbox, String radioCassetteCdRemarks, boolean radioCassetteCdCheckbox, String engineCompartmentRemarks, boolean engineCompartmentCheckbox, String computerBoxRemarks, boolean computerBoxCheckbox, String hornRemarks, boolean hornCheckbox) {
         this.id = id;
         this.rearViewMirrorRemarks = rearViewMirrorRemarks;
         this.rearViewMirrorCheckbox = rearViewMirrorCheckbox;
@@ -75,7 +75,7 @@ public class Form4Entity {
     }
 
     @Ignore
-    public Form4Entity(String rearViewMirrorRemarks, int rearViewMirrorCheckbox, String windowSwitchesRemarks, int windowSwitchesCheckbox, String floorMatsCarpetRemarks, int floorMatsCarpetCheckbox, String dashboardRemarks, int dashboardCheckbox, String engineSensorsAndFusesRemarks, int engineSensorsAndFusesCheckbox, String washerBottlesRemarks, int washerBottlesCheckbox, String cigarLighterRemarks, int cigarLighterCheckbox, String speakerRemarks, int speakerCheckbox, String radioCassetteCdRemarks, int radioCassetteCdCheckbox, String engineCompartmentRemarks, int engineCompartmentCheckbox, String computerBoxRemarks, int computerBoxCheckbox, String hornRemarks, int hornCheckbox) {
+    public Form4Entity(String rearViewMirrorRemarks, boolean rearViewMirrorCheckbox, String windowSwitchesRemarks, boolean windowSwitchesCheckbox, String floorMatsCarpetRemarks, boolean floorMatsCarpetCheckbox, String dashboardRemarks, boolean dashboardCheckbox, String engineSensorsAndFusesRemarks, boolean engineSensorsAndFusesCheckbox, String washerBottlesRemarks, boolean washerBottlesCheckbox, String cigarLighterRemarks, boolean cigarLighterCheckbox, String speakerRemarks, boolean speakerCheckbox, String radioCassetteCdRemarks, boolean radioCassetteCdCheckbox, String engineCompartmentRemarks, boolean engineCompartmentCheckbox, String computerBoxRemarks, boolean computerBoxCheckbox, String hornRemarks, boolean hornCheckbox) {
         this.rearViewMirrorRemarks = rearViewMirrorRemarks;
         this.rearViewMirrorCheckbox = rearViewMirrorCheckbox;
         this.windowSwitchesRemarks = windowSwitchesRemarks;
@@ -118,11 +118,11 @@ public class Form4Entity {
         this.rearViewMirrorRemarks = rearViewMirrorRemarks;
     }
 
-    public int getRearViewMirrorCheckbox() {
+    public boolean isRearViewMirrorCheckbox() {
         return rearViewMirrorCheckbox;
     }
 
-    public void setRearViewMirrorCheckbox(int rearViewMirrorCheckbox) {
+    public void setRearViewMirrorCheckbox(boolean rearViewMirrorCheckbox) {
         this.rearViewMirrorCheckbox = rearViewMirrorCheckbox;
     }
 
@@ -134,11 +134,11 @@ public class Form4Entity {
         this.windowSwitchesRemarks = windowSwitchesRemarks;
     }
 
-    public int getWindowSwitchesCheckbox() {
+    public boolean isWindowSwitchesCheckbox() {
         return windowSwitchesCheckbox;
     }
 
-    public void setWindowSwitchesCheckbox(int windowSwitchesCheckbox) {
+    public void setWindowSwitchesCheckbox(boolean windowSwitchesCheckbox) {
         this.windowSwitchesCheckbox = windowSwitchesCheckbox;
     }
 
@@ -150,11 +150,11 @@ public class Form4Entity {
         this.floorMatsCarpetRemarks = floorMatsCarpetRemarks;
     }
 
-    public int getFloorMatsCarpetCheckbox() {
+    public boolean isFloorMatsCarpetCheckbox() {
         return floorMatsCarpetCheckbox;
     }
 
-    public void setFloorMatsCarpetCheckbox(int floorMatsCarpetCheckbox) {
+    public void setFloorMatsCarpetCheckbox(boolean floorMatsCarpetCheckbox) {
         this.floorMatsCarpetCheckbox = floorMatsCarpetCheckbox;
     }
 
@@ -166,11 +166,11 @@ public class Form4Entity {
         this.dashboardRemarks = dashboardRemarks;
     }
 
-    public int getDashboardCheckbox() {
+    public boolean isDashboardCheckbox() {
         return dashboardCheckbox;
     }
 
-    public void setDashboardCheckbox(int dashboardCheckbox) {
+    public void setDashboardCheckbox(boolean dashboardCheckbox) {
         this.dashboardCheckbox = dashboardCheckbox;
     }
 
@@ -182,11 +182,11 @@ public class Form4Entity {
         this.engineSensorsAndFusesRemarks = engineSensorsAndFusesRemarks;
     }
 
-    public int getEngineSensorsAndFusesCheckbox() {
+    public boolean isEngineSensorsAndFusesCheckbox() {
         return engineSensorsAndFusesCheckbox;
     }
 
-    public void setEngineSensorsAndFusesCheckbox(int engineSensorsAndFusesCheckbox) {
+    public void setEngineSensorsAndFusesCheckbox(boolean engineSensorsAndFusesCheckbox) {
         this.engineSensorsAndFusesCheckbox = engineSensorsAndFusesCheckbox;
     }
 
@@ -198,11 +198,11 @@ public class Form4Entity {
         this.washerBottlesRemarks = washerBottlesRemarks;
     }
 
-    public int getWasherBottlesCheckbox() {
+    public boolean isWasherBottlesCheckbox() {
         return washerBottlesCheckbox;
     }
 
-    public void setWasherBottlesCheckbox(int washerBottlesCheckbox) {
+    public void setWasherBottlesCheckbox(boolean washerBottlesCheckbox) {
         this.washerBottlesCheckbox = washerBottlesCheckbox;
     }
 
@@ -214,11 +214,11 @@ public class Form4Entity {
         this.cigarLighterRemarks = cigarLighterRemarks;
     }
 
-    public int getCigarLighterCheckbox() {
+    public boolean isCigarLighterCheckbox() {
         return cigarLighterCheckbox;
     }
 
-    public void setCigarLighterCheckbox(int cigarLighterCheckbox) {
+    public void setCigarLighterCheckbox(boolean cigarLighterCheckbox) {
         this.cigarLighterCheckbox = cigarLighterCheckbox;
     }
 
@@ -230,11 +230,11 @@ public class Form4Entity {
         this.speakerRemarks = speakerRemarks;
     }
 
-    public int getSpeakerCheckbox() {
+    public boolean isSpeakerCheckbox() {
         return speakerCheckbox;
     }
 
-    public void setSpeakerCheckbox(int speakerCheckbox) {
+    public void setSpeakerCheckbox(boolean speakerCheckbox) {
         this.speakerCheckbox = speakerCheckbox;
     }
 
@@ -246,11 +246,11 @@ public class Form4Entity {
         this.radioCassetteCdRemarks = radioCassetteCdRemarks;
     }
 
-    public int getRadioCassetteCdCheckbox() {
+    public boolean isRadioCassetteCdCheckbox() {
         return radioCassetteCdCheckbox;
     }
 
-    public void setRadioCassetteCdCheckbox(int radioCassetteCdCheckbox) {
+    public void setRadioCassetteCdCheckbox(boolean radioCassetteCdCheckbox) {
         this.radioCassetteCdCheckbox = radioCassetteCdCheckbox;
     }
 
@@ -262,11 +262,11 @@ public class Form4Entity {
         this.engineCompartmentRemarks = engineCompartmentRemarks;
     }
 
-    public int getEngineCompartmentCheckbox() {
+    public boolean isEngineCompartmentCheckbox() {
         return engineCompartmentCheckbox;
     }
 
-    public void setEngineCompartmentCheckbox(int engineCompartmentCheckbox) {
+    public void setEngineCompartmentCheckbox(boolean engineCompartmentCheckbox) {
         this.engineCompartmentCheckbox = engineCompartmentCheckbox;
     }
 
@@ -278,11 +278,11 @@ public class Form4Entity {
         this.computerBoxRemarks = computerBoxRemarks;
     }
 
-    public int getComputerBoxCheckbox() {
+    public boolean isComputerBoxCheckbox() {
         return computerBoxCheckbox;
     }
 
-    public void setComputerBoxCheckbox(int computerBoxCheckbox) {
+    public void setComputerBoxCheckbox(boolean computerBoxCheckbox) {
         this.computerBoxCheckbox = computerBoxCheckbox;
     }
 
@@ -294,11 +294,11 @@ public class Form4Entity {
         this.hornRemarks = hornRemarks;
     }
 
-    public int getHornCheckbox() {
+    public boolean isHornCheckbox() {
         return hornCheckbox;
     }
 
-    public void setHornCheckbox(int hornCheckbox) {
+    public void setHornCheckbox(boolean hornCheckbox) {
         this.hornCheckbox = hornCheckbox;
     }
 }

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.servicemaster.R;
 import com.example.servicemaster.roomdatabases.DatabaseConfig;
+import com.example.servicemaster.roomdatabases.entities.Form5Entity;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,30 +26,52 @@ public class Form5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form5);
 
-        wheelsRims = (EditText) findViewById(R.id.wheelsRimsEditText);
-        wheelsRimsCheckbox = (MaterialCheckBox) findViewById(R.id.wheelsRimsCheckbox);
+        wheelsRims = findViewById(R.id.wheelsRimsEditText);
+        wheelsRimsCheckbox = findViewById(R.id.wheelsRimsCheckbox);
 
-        wheelsCapsHubs = (EditText) findViewById(R.id.wheelsCapsHubsEditText);
-        wheelsCapsHubsCheckbox = (MaterialCheckBox) findViewById(R.id.wheelsCapsHubsCheckbox);
+        wheelsCapsHubs = findViewById(R.id.wheelsCapsHubsEditText);
+        wheelsCapsHubsCheckbox = findViewById(R.id.wheelsCapsHubsCheckbox);
 
-        mudFlap = (EditText) findViewById(R.id.mudflapEditText);
-        mudFlapCheckbox = (MaterialCheckBox) findViewById(R.id.mudflapCheckbox);
+        mudFlap = findViewById(R.id.mudflapEditText);
+        mudFlapCheckbox = findViewById(R.id.mudflapCheckbox);
 
-        steeringWheel = (EditText) findViewById(R.id.steeringWheelEditText);
-        steeringWheelCheckbox = (MaterialCheckBox) findViewById(R.id.steeringWheelCheckbox);
+        steeringWheel = findViewById(R.id.steeringWheelEditText);
+        steeringWheelCheckbox = findViewById(R.id.steeringWheelCheckbox);
 
         databaseConfig = DatabaseConfig.databaseGetInstance(Form5Activity.this);
 
+        int id = databaseConfig.form5Dao().getLastID();
 
-        FloatingActionButton floatingActionButton5 = (FloatingActionButton) findViewById(R.id.floatingActionButton5);
+
+        if(databaseConfig.form5Dao().getData(id)){
+            Form5Entity form5Entity = databaseConfig.form5Dao().getRow(id);
+            wheelsRims.setText(form5Entity.getWheelRimsRemarks());
+            wheelsRimsCheckbox.setChecked(form5Entity.isWheelRimsCheckbox());
+
+            wheelsCapsHubs.setText(form5Entity.getWheelCapsHubsRemarks());
+            wheelsCapsHubsCheckbox.setChecked(form5Entity.isWheelCapsHubsCheckbox());
+
+            mudFlap.setText(form5Entity.getMudFlapRemarks());
+            mudFlapCheckbox.setChecked(form5Entity.isMudFlapCheckbox());
+
+            steeringWheel.setText(form5Entity.getSteeringWheelRemarks());
+            steeringWheelCheckbox.setChecked(form5Entity.isSteeringWheelCheckbox());
+        }
+
+
+        FloatingActionButton floatingActionButton5 = findViewById(R.id.floatingActionButton5);
 
         floatingActionButton5.setOnClickListener(view -> {
+            databaseConfig.form5Dao().insertData(new Form5Entity(wheelsRims.getText().toString(), wheelsRimsCheckbox.isChecked(),
+                    wheelsCapsHubs.getText().toString(), wheelsCapsHubsCheckbox.isChecked(),
+                    mudFlap.getText().toString(), mudFlapCheckbox.isChecked(),
+                    steeringWheel.getText().toString(), steeringWheelCheckbox.isChecked()));
             Intent i = new Intent(Form5Activity.this, Form6Activity.class);
             startActivity(i);
             finish();
         });
 
-        ImageView imageView = (ImageView) findViewById(R.id.backButtonForm5);
+        ImageView imageView = findViewById(R.id.backButtonForm5);
 
         imageView.setOnClickListener(view -> {
             Intent i = new Intent(Form5Activity.this, Form4Activity.class);
